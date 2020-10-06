@@ -1,0 +1,10 @@
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\bin\Debug\Proyecto Integrador.exe.config
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\bin\Debug\Proyecto Integrador.exe
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\bin\Debug\Proyecto Integrador.pdb
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.csprojAssemblyReference.cache
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto_Integrador.UserInterface.resources
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto_Integrador.Properties.Resources.resources
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.csproj.GenerateResource.cache
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.exe
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.pdb
