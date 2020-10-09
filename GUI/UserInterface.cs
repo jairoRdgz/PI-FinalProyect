@@ -25,8 +25,11 @@ namespace Proyecto_Integrador
             
         }
 
-        public void loadData(string a)
+        public void loadData()
         {
+            //path of the dataset
+            //it is inside the projects folder
+            string a = "../../Dataset.csv";
             String[] lineas = File.ReadAllLines(a);
 
             for (int i = 1; i < lineas.Length; i++)
@@ -88,14 +91,8 @@ namespace Proyecto_Integrador
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //
-                path.Text = openFileDialog1.FileName;
-
-                loadData(openFileDialog1.FileName);
-            }
+            loadData();
+           
         }
 
         private void filtrado_TextChanged(object sender, EventArgs e)
