@@ -33,7 +33,7 @@ namespace Proyecto_Integrador
             {
                 String[] valores = lineas[i].Split(';');
 
-                list.addDato(new Dato(valores[0], valores[1], valores[3], valores[5],valores[6], valores[7]));
+                list.addDato(new Dato(Int32.Parse(valores[0]), valores[1], valores[2], valores[3],valores[4], Int32.Parse(valores[5]), valores[6], valores[7], valores[16]));
             }   
             fill();
             loadCharts();
@@ -42,23 +42,29 @@ namespace Proyecto_Integrador
         public void initializeTable()
         {
             table = new DataTable();
-            table.Columns.Add("DEPARTAMENTO");
-            table.Columns.Add("MUNICIPIO");
-            table.Columns.Add("ARMA");
-            table.Columns.Add("GENERO");
-            table.Columns.Add("EDAD");
-            table.Columns.Add("CANTIDAD");
+            table.Columns.Add("AGE");
+            table.Columns.Add("JOB");
+            table.Columns.Add("MARITAL");
+            table.Columns.Add("EDUCATION");
+            table.Columns.Add("DEBT");
+            table.Columns.Add("BALANCE");
+            table.Columns.Add("HOUSING");
+            table.Columns.Add("LOAN");
+            table.Columns.Add("DEPOSIT");
             tablaDatos.DataSource = table;
         }
 
         public void fillFiltros()
         {
-            filtros.Items.Add("DEPARTAMENTO");
-            filtros.Items.Add("MUNICIPIO");
-            filtros.Items.Add("ARMA");
-            filtros.Items.Add("GENERO");
-            filtros.Items.Add("EDAD");
-            filtros.Items.Add("CANTIDAD");
+            filtros.Items.Add("AGE");
+            filtros.Items.Add("JOB");
+            filtros.Items.Add("MARITAL");
+            filtros.Items.Add("EDUCATION");
+            filtros.Items.Add("DEBT");
+            filtros.Items.Add("BALANCE");
+            filtros.Items.Add("HOUSING");
+            filtros.Items.Add("LOAN");
+            filtros.Items.Add("DEPOSIT");
         }
 
         public void fill()
@@ -66,12 +72,15 @@ namespace Proyecto_Integrador
             foreach (var item in list.getDatos())
             {
                 DataRow row = table.NewRow();
-                row[0] = item.getDepartamento();
-                row[1] = item.getMunicipio();
-                row[2] = item.getArma();
-                row[3] = item.getGenero();
-                row[4] = item.getEdad();
-                row[5] = item.getCantidad();
+                row[0] = item.Age;
+                row[1] = item.Job;
+                row[2] = item.Marital;
+                row[3] = item.Education;
+                row[4] = item.Debt;
+                row[5] = item.Balance;
+                row[6] = item.Housing;
+                row[7] = item.Loan;
+                row[8] = item.Y;
 
                 table.Rows.Add(row);
             }
@@ -91,16 +100,22 @@ namespace Proyecto_Integrador
 
         private void filtrado_TextChanged(object sender, EventArgs e)
         {
-            table.DefaultView.RowFilter = $"'{filtros.Text}' LIKE '{filtrado.Text}'";
+            if (filtros.Text.Equals(""))
+            {
+                table.DefaultView.RowFilter = $"*";
+            }
+            else
+            {
+                string fUno = filtros.Text;
+                string fDos = filtrado.Text;
+                table.DefaultView.RowFilter = $"'{fUno}' LIKE '{fDos}'";
+            }
+            
         }
 
         private void loadCharts()
         {
-            for (int i = 0; i < 3; i++)
-            {
-                edades.Series["Edades"].Points.AddXY(list.getEdades().ElementAt(i), list.getEdadesValues()[i]);
-            }
-            
+                        
         }
     }
 }
