@@ -59,6 +59,7 @@ namespace Proyecto_Integrador
 
         public void fillFiltros()
         {
+            filtros.Items.Add("...");
             filtros.Items.Add("AGE");
             filtros.Items.Add("JOB");
             filtros.Items.Add("MARITAL");
@@ -97,17 +98,7 @@ namespace Proyecto_Integrador
 
         private void filtrado_TextChanged(object sender, EventArgs e)
         {
-            if (filtros.Text.Equals(""))
-            {
-                table.DefaultView.RowFilter = $"*";
-            }
-            else
-            {
-                string fUno = filtros.Text;
-                string fDos = filtrado.Text;
-                table.DefaultView.RowFilter = $"'{fUno}' LIKE '{fDos}'";
-            }
-            
+            table.DefaultView.RowFilter = $"{filtros.Text} LIKE '{filtrado.Text}%'";
         }
 
         private void loadCharts()
