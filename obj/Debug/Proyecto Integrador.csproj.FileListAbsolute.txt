@@ -8,3 +8,13 @@ C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proy
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.exe
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\obj\Debug\Proyecto Integrador.pdb
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Proyecto Integrador.exe.config
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Proyecto Integrador.exe
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Proyecto Integrador.pdb
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csprojAssemblyReference.cache
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto_Integrador.UserInterface.resources
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto_Integrador.Properties.Resources.resources
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.GenerateResource.cache
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.exe
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.pdb
