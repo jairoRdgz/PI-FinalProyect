@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.path = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -91,7 +91,7 @@
             this.tablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaDatos.Location = new System.Drawing.Point(9, 71);
             this.tablaDatos.Name = "tablaDatos";
-            this.tablaDatos.Size = new System.Drawing.Size(668, 445);
+            this.tablaDatos.Size = new System.Drawing.Size(1240, 445);
             this.tablaDatos.TabIndex = 25;
             // 
             // filtrado
@@ -109,7 +109,7 @@
             this.Home.Location = new System.Drawing.Point(12, 12);
             this.Home.Name = "Home";
             this.Home.SelectedIndex = 0;
-            this.Home.Size = new System.Drawing.Size(699, 555);
+            this.Home.Size = new System.Drawing.Size(1263, 555);
             this.Home.TabIndex = 38;
             // 
             // tabPage1
@@ -123,9 +123,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(691, 529);
+            this.tabPage1.Size = new System.Drawing.Size(1255, 529);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Datos";
+            this.tabPage1.Text = "Modelo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -141,28 +141,28 @@
             // 
             // edades
             // 
-            chartArea1.Name = "ChartArea1";
-            this.edades.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.edades.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.edades.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.edades.Legends.Add(legend2);
             this.edades.Location = new System.Drawing.Point(46, 21);
             this.edades.Name = "edades";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Edades";
-            this.edades.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Edades";
+            this.edades.Series.Add(series2);
             this.edades.Size = new System.Drawing.Size(544, 369);
             this.edades.TabIndex = 0;
             this.edades.Text = "Edades";
-            title1.Name = "Grupos de edades";
-            this.edades.Titles.Add(title1);
+            title2.Name = "Grupos de edades";
+            this.edades.Titles.Add(title2);
             // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 570);
+            this.ClientSize = new System.Drawing.Size(1287, 570);
             this.Controls.Add(this.Home);
             this.Name = "UserInterface";
             this.Text = "Form1";
