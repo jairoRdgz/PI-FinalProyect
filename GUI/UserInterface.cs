@@ -59,7 +59,6 @@ namespace Proyecto_Integrador
 
         public void fillFiltros()
         {
-            filtros.Items.Add("...");
             filtros.Items.Add("AGE");
             filtros.Items.Add("JOB");
             filtros.Items.Add("MARITAL");
@@ -103,7 +102,63 @@ namespace Proyecto_Integrador
 
         private void loadCharts()
         {
-                        
+            debtChartInfo();
+            housingChartInfo();
+        }
+
+        private void debtChartInfo()
+        {
+            int yes = 0;
+            int no = 0;
+            int un = 0;
+            for (int i = 0; i < list.getDatos().Count; i++)
+            {
+                //debtChart.Series["Series1"].Points.Add(list.getDatos().ElementAt(i).Debt);
+                if (list.getDatos().ElementAt(i).Debt.Equals("yes"))
+                {
+                    yes++;
+                }else if (list.getDatos().ElementAt(i).Debt.Equals("no"))
+                {
+                    no++;
+                }
+                else
+                {
+                    un++;
+                }
+                
+            }
+            debtChart.Series["Series1"].Points.AddXY("Yes", yes);
+            debtChart.Series["Series1"].Points.AddXY("No", no);
+            if (un != 0)
+                debtChart.Series["Series1"].Points.AddXY("Unknown", un);
+        }
+
+        private void housingChartInfo()
+        {
+            int yes = 0;
+            int no = 0;
+            int un = 0;
+            for (int i = 0; i < list.getDatos().Count; i++)
+            {
+                //debtChart.Series["Series1"].Points.Add(list.getDatos().ElementAt(i).Debt);
+                if (list.getDatos().ElementAt(i).Housing.Equals("yes"))
+                {
+                    yes++;
+                }
+                else if (list.getDatos().ElementAt(i).Housing.Equals("no"))
+                {
+                    no++;
+                }
+                else
+                {
+                    un++;
+                }
+
+            }
+            housingChart.Series["Series1"].Points.AddXY("Yes", yes);
+            housingChart.Series["Series1"].Points.AddXY("No", no);
+            if (un != 0)
+                housingChart.Series["Series1"].Points.AddXY("Unknown", un);
         }
     }
 }
