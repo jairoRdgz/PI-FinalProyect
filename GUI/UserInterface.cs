@@ -92,6 +92,7 @@ namespace Proyecto_Integrador
         private void btnLoad_Click(object sender, EventArgs e)
         {
             loadData();
+            
            
         }
 
@@ -104,6 +105,7 @@ namespace Proyecto_Integrador
         {
             debtChartInfo();
             housingChartInfo();
+            maritalChartInfo();
         }
 
         private void debtChartInfo()
@@ -159,6 +161,32 @@ namespace Proyecto_Integrador
             housingChart.Series["Series1"].Points.AddXY("No", no);
             if (un != 0)
                 housingChart.Series["Series1"].Points.AddXY("Unknown", un);
+        }
+        private void maritalChartInfo()
+        {
+            int married = 0;
+            int single = 0;
+            int divorced = 0;
+            for (int i = 0; i < list.getDatos().Count; i++)
+            {
+                //debtChart.Series["Series1"].Points.Add(list.getDatos().ElementAt(i).Debt);
+                if (list.getDatos().ElementAt(i).Marital.Equals("married"))
+                {
+                    married++;
+                }
+                else if (list.getDatos().ElementAt(i).Marital.Equals("single"))
+                {
+                    single++;
+                }
+                else
+                {
+                    divorced++;
+                }
+
+            }
+            maritalChart.Series["Series1"].Points.AddXY("Married", married);
+            maritalChart.Series["Series1"].Points.AddXY("Single", single);
+            maritalChart.Series["Series1"].Points.AddXY("Divorced", divorced);
         }
     }
 }
