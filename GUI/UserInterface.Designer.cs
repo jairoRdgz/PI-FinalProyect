@@ -60,6 +60,9 @@
             this.housingChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.debtChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.maritalChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.ageChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.Home.SuspendLayout();
@@ -163,6 +166,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.jobChart);
@@ -207,7 +213,7 @@
             this.jobChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.jobChart.Legends.Add(legend1);
-            this.jobChart.Location = new System.Drawing.Point(440, 7);
+            this.jobChart.Location = new System.Drawing.Point(436, 22);
             this.jobChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jobChart.Name = "jobChart";
             series1.ChartArea = "ChartArea1";
@@ -217,6 +223,7 @@
             this.jobChart.Size = new System.Drawing.Size(413, 321);
             this.jobChart.TabIndex = 5;
             this.jobChart.Text = "chart5";
+            this.jobChart.Click += new System.EventHandler(this.jobChart_Click);
             // 
             // housingChart
             // 
@@ -276,7 +283,39 @@
             this.maritalChart.Series.Add(series4);
             this.maritalChart.Size = new System.Drawing.Size(447, 321);
             this.maritalChart.TabIndex = 2;
-            this.maritalChart.Text = "chart2";
+            this.maritalChart.Text = "MARITAL";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(898, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "MARITAl";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(492, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "JOB ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(68, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "AGE";
             // 
             // ageChart
             // 
@@ -284,8 +323,8 @@
             this.ageChart.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.ageChart.Legends.Add(legend5);
-            this.ageChart.Location = new System.Drawing.Point(8, 7);
-            this.ageChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ageChart.Location = new System.Drawing.Point(8, 22);
+            this.ageChart.Margin = new System.Windows.Forms.Padding(4);
             this.ageChart.Name = "ageChart";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
@@ -295,7 +334,8 @@
             this.ageChart.Series.Add(series5);
             this.ageChart.Size = new System.Drawing.Size(447, 321);
             this.ageChart.TabIndex = 1;
-            this.ageChart.Text = "chart1";
+            this.ageChart.Text = "age chart";
+            this.ageChart.Click += new System.EventHandler(this.ageChart_Click);
             // 
             // UserInterface
             // 
@@ -333,12 +373,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataVisualization.Charting.Chart maritalChart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ageChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart jobChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart housingChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart debtChart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ageChart;
     }
 }
 

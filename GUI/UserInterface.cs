@@ -28,7 +28,7 @@ namespace Proyecto_Integrador
         public void loadData()
         {
             //path of the dataset
-            //it is inside the projects folder
+            //it is inside the docs folder
             string a = "../../docs/Dataset.csv";
             String[] lineas = File.ReadAllLines(a);
 
@@ -106,6 +106,55 @@ namespace Proyecto_Integrador
             debtChartInfo();
             housingChartInfo();
             maritalChartInfo();
+            ageChartInfo();
+        }
+
+        private void ageChartInfo()
+        {
+            //[20,30)
+            int group1 = 0;
+            //[30,40)
+            int group2 = 0;
+            //[40,50)
+            int group3 = 0;
+            //[50,60)
+            int group4 = 0;
+            //(+60)
+            int group5 = 0;
+
+            for (int i = 0; i < list.getDatos().Count; i++)
+            {
+                int age = list.getDatos().ElementAt(i).Age;
+                if (age > 20 && age <= 30)
+                {
+                    group1++;
+                    Console.WriteLine(group1 + "");
+                }
+                else if (age > 31 && age <= 40)
+                {
+                    group2++;
+                }
+                else if (age > 41 && age <= 50)
+                {
+                    group3++;
+                }
+                else if (age > 51 && age <= 60)
+                {
+                    group4++;
+                }
+                else if (age>60){
+                    group5++;
+                }
+
+
+            }
+            ageChart.Series["Series1"].Points.AddXY("20 - 30 ", group1);
+            ageChart.Series["Series1"].Points.AddXY("30 - 40 ", group2);
+            ageChart.Series["Series1"].Points.AddXY("40 - 50 ", group3);
+            ageChart.Series["Series1"].Points.AddXY("50 - 60 ", group4);
+            ageChart.Series["Series1"].Points.AddXY("+60", group5);
+
+
         }
 
         private void debtChartInfo()
@@ -190,6 +239,26 @@ namespace Proyecto_Integrador
         }
 
         private void tablaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ageChart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jobChart_Click(object sender, EventArgs e)
         {
 
         }
