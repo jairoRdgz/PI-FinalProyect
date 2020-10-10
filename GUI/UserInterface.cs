@@ -29,7 +29,7 @@ namespace Proyecto_Integrador
         {
             //path of the dataset
             //it is inside the projects folder
-            string a = "../../Dataset.csv";
+            string a = "../../docs/Dataset.csv";
             String[] lineas = File.ReadAllLines(a);
 
             for (int i = 1; i < lineas.Length; i++)
@@ -187,6 +187,11 @@ namespace Proyecto_Integrador
             maritalChart.Series["Series1"].Points.AddXY("Married", married);
             maritalChart.Series["Series1"].Points.AddXY("Single", single);
             maritalChart.Series["Series1"].Points.AddXY("Divorced", divorced);
+        }
+
+        private void tablaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
