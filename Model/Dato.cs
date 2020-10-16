@@ -41,5 +41,7 @@ namespace Proyecto_Integrador.Model
         public string Housing { get => housing; set => housing = value; }
         public string Loan { get => loan; set => loan = value; }
         public string Y { get => y; set => y = value; }
+
+
     }
 }
