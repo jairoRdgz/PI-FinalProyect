@@ -107,6 +107,7 @@ namespace Proyecto_Integrador
             housingChartInfo();
             maritalChartInfo();
             ageChartInfo();
+            jobChrtInfo();
         }
 
         private void ageChartInfo()
@@ -238,7 +239,8 @@ namespace Proyecto_Integrador
             maritalChart.Series["Series1"].Points.AddXY("Divorced", divorced);
         }
 
-        private void tablaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+         private void jobChartInfo()
         {
 
         }
