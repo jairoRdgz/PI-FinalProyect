@@ -29,7 +29,7 @@ namespace Proyecto_Integrador
         {
             //path of the dataset
             //it is inside the docs folder
-            string a = "../../docs/Dataset.csv";
+            string a = "../../data/Dataset.csv";
             String[] lineas = File.ReadAllLines(a);
 
             for (int i = 1; i < lineas.Length; i++)
