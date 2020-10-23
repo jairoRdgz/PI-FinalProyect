@@ -28,3 +28,10 @@ C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integr
 C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
 C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.exe
 C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.pdb
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.csprojAssemblyReference.cache
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto_Integrador.UserInterface.resources
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto_Integrador.Properties.Resources.resources
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.csproj.GenerateResource.cache
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.exe
+C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.pdb

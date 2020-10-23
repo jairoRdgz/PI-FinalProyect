@@ -107,7 +107,7 @@ namespace Proyecto_Integrador
             housingChartInfo();
             maritalChartInfo();
             ageChartInfo();
-            jobChrtInfo();
+            jobChartInfo();
         }
 
         private void ageChartInfo()

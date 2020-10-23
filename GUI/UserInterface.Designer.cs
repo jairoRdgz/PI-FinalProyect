@@ -125,7 +125,7 @@
             this.tablaDatos.RowHeadersWidth = 51;
             this.tablaDatos.Size = new System.Drawing.Size(1281, 548);
             this.tablaDatos.TabIndex = 25;
-            this.tablaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellContentClick);
+//            this.tablaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellContentClick);
             // 
             // filtrado
             // 
