@@ -35,3 +35,6 @@ C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.csproj.GenerateRes
 C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
 C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.exe
 C:\Users\Toño\Source\Repos\p1f\obj\Debug\Proyecto Integrador.pdb
+C:\Users\Toño\Source\Repos\p1f\bin\Debug\Proyecto Integrador.exe.config
+C:\Users\Toño\Source\Repos\p1f\bin\Debug\Proyecto Integrador.exe
+C:\Users\Toño\Source\Repos\p1f\bin\Debug\Proyecto Integrador.pdb
