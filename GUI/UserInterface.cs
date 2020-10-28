@@ -323,20 +323,7 @@ namespace Proyecto_Integrador
             jobChart.Series["Series1"].Points.AddXY("Unemployed", unemployed);
             jobChart.Series["Series1"].Points.AddXY("Unknown", unknown);
         }
-        /*
-         * admin
-         * blue-collar
-         * entrepreneur
-         * housemaid
-         * management
-         * retired
-         * self-employed
-         * services
-         * student
-         * technician
-         * unemployed
-         * unknown
-         */
+       
 
         private void ageChart_Click(object sender, EventArgs e)
         {
