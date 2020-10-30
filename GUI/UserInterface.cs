@@ -29,7 +29,7 @@ namespace Proyecto_Integrador
         {
             //path of the dataset
             //it is inside the docs folder
-            string a = "../../docs/Dataset.csv";
+            string a = "../../data/Dataset.csv";
             String[] lineas = File.ReadAllLines(a);
 
             for (int i = 1; i < lineas.Length; i++)
@@ -107,6 +107,7 @@ namespace Proyecto_Integrador
             housingChartInfo();
             maritalChartInfo();
             ageChartInfo();
+            jobChartInfo();
         }
 
         private void ageChartInfo()
@@ -237,11 +238,92 @@ namespace Proyecto_Integrador
             maritalChart.Series["Series1"].Points.AddXY("Single", single);
             maritalChart.Series["Series1"].Points.AddXY("Divorced", divorced);
         }
-
-        private void tablaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+         private void jobChartInfo()
         {
+            int admin = 0;
+            int blueCollar = 0;
+            int entrepreneur = 0;
+            int housemaid = 0;
+            int management = 0;
+            int retired = 0;
+            int selfEmployed = 0;
+            int services = 0;
+            int student = 0;
+            int technician = 0;
+            int unemployed = 0;
+            int unknown = 0;
 
+            int divorced = 0;
+            for (int i = 0; i < list.getDatos().Count; i++)
+            {
+                //debtChart.Series["Series1"].Points.Add(list.getDatos().ElementAt(i).Debt);
+                if (list.getDatos().ElementAt(i).Job.Equals("admin"))
+                {
+                    admin++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("blue-collar"))
+                {
+                    blueCollar++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("entrepreneur"))
+                {
+                    entrepreneur++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("housemaid"))
+                {
+                    housemaid++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("management"))
+                {
+                    management++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("retired"))
+                {
+                    retired++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("self-employed"))
+                {
+                    selfEmployed++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("services"))
+                {
+                    services++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("student"))
+                {
+                    student++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("technician"))
+                {
+                    technician++;
+                }
+                else if (list.getDatos().ElementAt(i).Job.Equals("unemoloyed"))
+                {
+                    unemployed++;
+                }
+               
+                else
+                {
+                    unknown++;
+                }
+
+              
+            }
+          jobChart.Series["Series1"].Points.AddXY("Admin", admin);
+          jobChart.Series["Series1"].Points.AddXY("Blue-collar", blueCollar);
+           jobChart.Series["Series1"].Points.AddXY("Entrepreneur", entrepreneur);
+            jobChart.Series["Series1"].Points.AddXY("Housemaid", housemaid);
+            jobChart.Series["Series1"].Points.AddXY("Management", blueCollar);
+            jobChart.Series["Series1"].Points.AddXY("Retired", retired);
+            jobChart.Series["Series1"].Points.AddXY("self-employed", selfEmployed);
+            jobChart.Series["Series1"].Points.AddXY("Services", services);
+            jobChart.Series["Series1"].Points.AddXY("Student", student);
+            jobChart.Series["Series1"].Points.AddXY("Technician", technician);
+            jobChart.Series["Series1"].Points.AddXY("Unemployed", unemployed);
+            jobChart.Series["Series1"].Points.AddXY("Unknown", unknown);
         }
+       
 
         private void ageChart_Click(object sender, EventArgs e)
         {
