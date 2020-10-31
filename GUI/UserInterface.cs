@@ -57,6 +57,9 @@ namespace Proyecto_Integrador
             tablaDatos.DataSource = table;
         }
 
+        //this method
+        //fills the 
+        //labels of the tables
         public void fillFiltros()
         {
             filtros.Items.Add("AGE");
@@ -96,11 +99,14 @@ namespace Proyecto_Integrador
            
         }
 
+        //this method filters the table
         private void filtrado_TextChanged(object sender, EventArgs e)
         {
             table.DefaultView.RowFilter = $"{filtros.Text} LIKE '{filtrado.Text}%'";
         }
 
+        //this method loads the charts
+        //that allow to visualize the data
         private void loadCharts()
         {
             debtChartInfo();
