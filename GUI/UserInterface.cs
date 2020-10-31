@@ -329,26 +329,5 @@ namespace Proyecto_Integrador
             jobChart.Series["Series1"].Points.AddXY("Unemployed", unemployed);
             jobChart.Series["Series1"].Points.AddXY("Unknown", unknown);
         }
-       
-
-        private void ageChart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jobChart_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

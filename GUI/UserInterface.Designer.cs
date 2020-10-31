@@ -235,7 +235,6 @@
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "JOB ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -247,7 +246,6 @@
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "MARITAl";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -284,7 +282,6 @@
             this.jobChart.Size = new System.Drawing.Size(391, 261);
             this.jobChart.TabIndex = 5;
             this.jobChart.Text = "chart5";
-            this.jobChart.Click += new System.EventHandler(this.jobChart_Click);
             // 
             // housingChart
             // 
