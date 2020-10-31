@@ -17,8 +17,8 @@ enviroment that can compile C# and run Windows Forms .net Framework applications
 Github repository link:
 https://github.com/jairoRdgz/PI-FinalProyect
 
-## Made By
-# Weketeam
+# Made By
+## Weketeam
 + [Antonio J. Cadavid](https://github.com/cadav1nci "cadav1nci")
 + [Juan David Hernandez](https://github.com/juanher0825 "juanher0825")
 + [Alejandro Suarez](https://github.com/ASuarez10 "ASuarez10")
