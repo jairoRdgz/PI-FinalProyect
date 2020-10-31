@@ -8,14 +8,18 @@ the information from a dataset which has a .csv format.
 The solution of the problem is implemented using C# and the .net framework. In order to have a GUI the project is a 
 windows forms app.
 
+# Dataset and related information
+For more information and the dataset used for in the developing of this proyect check this link 
+http://archive.ics.uci.edu/ml/datasets/Bank+Marketing 
 
-DOWNLOAD:
+# DOWNLOAD:
 
 If you want to execute this program you can download the code directly from the Github repository (link below), and run it in any
 enviroment that can compile C# and run Windows Forms .net Framework applications. 
 
 Github repository link:
 https://github.com/jairoRdgz/PI-FinalProyect
+
 
 # Made By
 ## Weketeam
