@@ -24,7 +24,8 @@ https://github.com/jairoRdgz/PI-FinalProyect
 + [Alejandro Suarez](https://github.com/ASuarez10 "ASuarez10")
 + [Jairo Rodriguez](https://github.com/jairoRdgz "jairoRdgz")
 
-[![forthebadge](https://forthebadge.com/images/badges/uses-c-sharp.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
+
 IDE used to develop the solution:
 Visual studio 2019
 
