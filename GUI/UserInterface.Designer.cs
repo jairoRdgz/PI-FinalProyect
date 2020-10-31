@@ -3,14 +3,14 @@
     partial class UserInterface
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Needed designer variable
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Cleans the resources that are being used
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if the managed resources must be dump; false if not.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,8 @@
         #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// This method is necessary to admit the designer.
+        /// the content of this method can´t be modified
         /// </summary>
         private void InitializeComponent()
         {
