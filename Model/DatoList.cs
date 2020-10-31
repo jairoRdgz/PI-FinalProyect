@@ -20,11 +20,25 @@ namespace Proyecto_Integrador.Model
         public DatoList()
         {
             datos = new List<Dato>();
+            jobList = new List<string>();
+            maritalList = new List<string>();
+            educationList = new List<string>();
+            debtList = new List<string>();
+            housingList = new List<string>();
+            loanList = new List<string>();
+            yList = new List<string>();
         }
 
         public void addDato(Dato a)
         {
             datos.Add(a);
+            initYList(a);
+            initLoanList(a);
+            initHousingList(a);
+            initDebtList(a);
+            initJobsList(a);
+            initEducationList(a);
+            initMaritalList(a);
         }
 
         public List<Dato> getDatos()
@@ -45,79 +59,58 @@ namespace Proyecto_Integrador.Model
         public List<string> LoanList { get => loanList; }
         public List<string> YList { get => yList; }
 
-        public void initYList()
+        public void initYList(Dato a)
         {
-            foreach (var item in datos)
+            if (!yList.Contains(a.Y))
             {
-                if (yList.Contains(item.Y))
-                {
-                    yList.Add(item.Y);
-                }
+                yList.Add(a.Y);
             }
         }
 
-        public void initLoanList()
+        public void initLoanList(Dato a)
         {
-            foreach (var item in datos)
+            if (!loanList.Contains(a.Loan))
             {
-                if (loanList.Contains(item.Loan))
-                {
-                    loanList.Add(item.Loan);
-                }
+                loanList.Add(a.Loan);
             }
         }
-        public void initHousingList()
+        public void initHousingList(Dato a)
         {
-            foreach (var item in datos)
+            if (!housingList.Contains(a.Housing))
             {
-                if (housingList.Contains(item.Housing))
-                {
-                    housingList.Add(item.Housing);
-                }
+                housingList.Add(a.Housing);
             }
         }
 
-        public void initDebtList()
+        public void initDebtList(Dato a)
         {
-            foreach (var item in datos)
+            if (!debtList.Contains(a.Debt))
             {
-                if (debtList.Contains(item.Debt))
-                {
-                    debtList.Add(item.Debt);
-                }
+                debtList.Add(a.Debt);
             }
         }
 
-        public void initJobsList()
+        public void initJobsList(Dato a)
         {
-            foreach (var item in datos)
+            if (!jobList.Contains(a.Job))
             {
-                if (jobList.Contains(item.Job))
-                {
-                    jobList.Add(item.Job);
-                }
+                jobList.Add(a.Job);
             }
         }
 
-        public void initEducationList()
+        public void initEducationList(Dato a)
         {
-            foreach (var item in datos)
+            if (!educationList.Contains(a.Education))
             {
-                if (educationList.Contains(item.Education))
-                {
-                    educationList.Add(item.Education);
-                }
+                educationList.Add(a.Education);
             }
         }
 
-        public void initMaritalList()
+        public void initMaritalList(Dato a)
         {
-            foreach (var item in datos)
+            if (!maritalList.Contains(a.Marital))
             {
-                if (maritalList.Contains(item.Marital))
-                {
-                    maritalList.Add(item.Marital);
-                }
+                maritalList.Add(a.Marital);
             }
         }
     }

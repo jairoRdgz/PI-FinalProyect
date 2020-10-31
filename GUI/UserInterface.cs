@@ -25,6 +25,25 @@ namespace Proyecto_Integrador
             
         }
 
+        public void initializePredictions()
+        {
+
+            foreach (var item in list.JobList)
+            {
+                PredictionJob.Items.Add(item);
+            }
+
+            foreach (var item in list.MaritalList)
+            {
+                predictionMarital.Items.Add(item);
+            }
+
+            foreach (var item in list.EducationList)
+            {
+                PredictionEducation.Items.Add(item);
+            }
+        }
+
         public void loadData()
         {
             //path of the dataset
@@ -40,6 +59,7 @@ namespace Proyecto_Integrador
             }   
             fill();
             loadCharts();
+            initializePredictions();
         }
 
         public void initializeTable()
@@ -328,6 +348,45 @@ namespace Proyecto_Integrador
             jobChart.Series["Series1"].Points.AddXY("Technician", technician);
             jobChart.Series["Series1"].Points.AddXY("Unemployed", unemployed);
             jobChart.Series["Series1"].Points.AddXY("Unknown", unknown);
+        }
+
+        public void prediction()
+        {
+            DatoList predictions = new DatoList();
+            string name = predictionName.Text;
+            int age = Int16.Parse(predictionAge.Text);
+            string job = PredictionJob.Text;
+            string marital = predictionMarital.Text;
+            string education = PredictionEducation.Text;
+            string debt = predictionDebt.Checked ? "yes" : "no";
+            int balance = Int16.Parse(predictionBalance.Text);
+            string housing = predictionHousing.Checked ? "yes" : "no";
+            string loan = PredictionLoan.Checked ? "yes" : "no";
+
+            Random random = new Random();
+            string y = random.Next(0, 1) == 0 ? "yes" : "no";
+
+            Dato predicted = new Dato(age, job, marital, education, debt, balance, housing, loan, y);
+
+            if (predictions.getDatos() == null)
+            {
+                predictions.addDato(predicted);
+                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+            }
+            else if (predictions.getDatos().Contains(predicted))
+            {
+                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+            }
+            else
+            {
+                predictions.addDato(predicted);
+                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription \ninto the bank plan";
+            }
+        }
+
+        private void MakePrediction_Click(object sender, EventArgs e)
+        {
+            prediction();
         }
     }
 }

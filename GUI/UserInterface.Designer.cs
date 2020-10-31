@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.path = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -65,6 +65,13 @@
             this.debtChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.maritalChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.PredictionLoan = new System.Windows.Forms.CheckBox();
+            this.predictionHousing = new System.Windows.Forms.CheckBox();
+            this.predictionDebt = new System.Windows.Forms.CheckBox();
+            this.PredictionEducation = new System.Windows.Forms.ComboBox();
+            this.predictionMarital = new System.Windows.Forms.ComboBox();
+            this.PredictionJob = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.predictionBalance = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,13 +84,7 @@
             this.predictionName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.MakePrediction = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.PredictionJob = new System.Windows.Forms.ComboBox();
-            this.predictionMarital = new System.Windows.Forms.ComboBox();
-            this.PredictionEducation = new System.Windows.Forms.ComboBox();
-            this.predictionDebt = new System.Windows.Forms.CheckBox();
-            this.predictionHousing = new System.Windows.Forms.CheckBox();
-            this.PredictionLoan = new System.Windows.Forms.CheckBox();
+            this.resultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.Home.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -199,17 +200,17 @@
             // 
             // ageChart
             // 
-            chartArea11.Name = "ChartArea1";
-            this.ageChart.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.ageChart.Legends.Add(legend11);
+            chartArea6.Name = "ChartArea1";
+            this.ageChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ageChart.Legends.Add(legend6);
             this.ageChart.Location = new System.Drawing.Point(15, 23);
             this.ageChart.Margin = new System.Windows.Forms.Padding(2);
             this.ageChart.Name = "ageChart";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.ageChart.Series.Add(series11);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.ageChart.Series.Add(series6);
             this.ageChart.Size = new System.Drawing.Size(297, 236);
             this.ageChart.TabIndex = 11;
             this.ageChart.Text = "chart1";
@@ -269,79 +270,80 @@
             // 
             // jobChart
             // 
-            chartArea12.Name = "ChartArea1";
-            this.jobChart.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.jobChart.Legends.Add(legend12);
+            chartArea7.Name = "ChartArea1";
+            this.jobChart.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.jobChart.Legends.Add(legend7);
             this.jobChart.Location = new System.Drawing.Point(310, 18);
             this.jobChart.Name = "jobChart";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.jobChart.Series.Add(series12);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.jobChart.Series.Add(series7);
             this.jobChart.Size = new System.Drawing.Size(391, 261);
             this.jobChart.TabIndex = 5;
             this.jobChart.Text = "chart5";
             // 
             // housingChart
             // 
-            chartArea13.Name = "ChartArea1";
-            this.housingChart.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.housingChart.Legends.Add(legend13);
+            chartArea8.Name = "ChartArea1";
+            this.housingChart.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.housingChart.Legends.Add(legend8);
             this.housingChart.Location = new System.Drawing.Point(531, 297);
             this.housingChart.Name = "housingChart";
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            this.housingChart.Series.Add(series13);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.housingChart.Series.Add(series8);
             this.housingChart.Size = new System.Drawing.Size(445, 207);
             this.housingChart.TabIndex = 4;
             this.housingChart.Text = "HOUSING";
-            title5.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title5.Name = "HOUSING";
-            this.housingChart.Titles.Add(title5);
+            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title3.Name = "HOUSING";
+            this.housingChart.Titles.Add(title3);
             // 
             // debtChart
             // 
-            chartArea14.Name = "ChartArea1";
-            this.debtChart.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.debtChart.Legends.Add(legend14);
+            chartArea9.Name = "ChartArea1";
+            this.debtChart.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.debtChart.Legends.Add(legend9);
             this.debtChart.Location = new System.Drawing.Point(25, 297);
             this.debtChart.Name = "debtChart";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series14.Legend = "Legend1";
-            series14.Name = "Series1";
-            this.debtChart.Series.Add(series14);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.debtChart.Series.Add(series9);
             this.debtChart.Size = new System.Drawing.Size(457, 207);
             this.debtChart.TabIndex = 3;
             this.debtChart.Text = "DEBT";
-            title6.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title6.Name = "DEBT";
-            this.debtChart.Titles.Add(title6);
+            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title4.Name = "DEBT";
+            this.debtChart.Titles.Add(title4);
             // 
             // maritalChart
             // 
-            chartArea15.Name = "ChartArea1";
-            this.maritalChart.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.maritalChart.Legends.Add(legend15);
+            chartArea10.Name = "ChartArea1";
+            this.maritalChart.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.maritalChart.Legends.Add(legend10);
             this.maritalChart.Location = new System.Drawing.Point(690, 18);
             this.maritalChart.Name = "maritalChart";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series15.Legend = "Legend1";
-            series15.Name = "Series1";
-            this.maritalChart.Series.Add(series15);
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.maritalChart.Series.Add(series10);
             this.maritalChart.Size = new System.Drawing.Size(335, 261);
             this.maritalChart.TabIndex = 2;
             this.maritalChart.Text = "MARITAL";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.resultado);
             this.tabPage3.Controls.Add(this.PredictionLoan);
             this.tabPage3.Controls.Add(this.predictionHousing);
             this.tabPage3.Controls.Add(this.predictionDebt);
@@ -368,6 +370,66 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Predictions";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // PredictionLoan
+            // 
+            this.PredictionLoan.AutoSize = true;
+            this.PredictionLoan.Location = new System.Drawing.Point(118, 344);
+            this.PredictionLoan.Name = "PredictionLoan";
+            this.PredictionLoan.Size = new System.Drawing.Size(15, 14);
+            this.PredictionLoan.TabIndex = 23;
+            this.PredictionLoan.UseVisualStyleBackColor = true;
+            // 
+            // predictionHousing
+            // 
+            this.predictionHousing.AutoSize = true;
+            this.predictionHousing.Location = new System.Drawing.Point(118, 306);
+            this.predictionHousing.Name = "predictionHousing";
+            this.predictionHousing.Size = new System.Drawing.Size(15, 14);
+            this.predictionHousing.TabIndex = 22;
+            this.predictionHousing.UseVisualStyleBackColor = true;
+            // 
+            // predictionDebt
+            // 
+            this.predictionDebt.AutoSize = true;
+            this.predictionDebt.Location = new System.Drawing.Point(118, 224);
+            this.predictionDebt.Name = "predictionDebt";
+            this.predictionDebt.Size = new System.Drawing.Size(15, 14);
+            this.predictionDebt.TabIndex = 21;
+            this.predictionDebt.UseVisualStyleBackColor = true;
+            // 
+            // PredictionEducation
+            // 
+            this.PredictionEducation.FormattingEnabled = true;
+            this.PredictionEducation.Location = new System.Drawing.Point(118, 180);
+            this.PredictionEducation.Name = "PredictionEducation";
+            this.PredictionEducation.Size = new System.Drawing.Size(376, 21);
+            this.PredictionEducation.TabIndex = 20;
+            // 
+            // predictionMarital
+            // 
+            this.predictionMarital.FormattingEnabled = true;
+            this.predictionMarital.Location = new System.Drawing.Point(118, 144);
+            this.predictionMarital.Name = "predictionMarital";
+            this.predictionMarital.Size = new System.Drawing.Size(376, 21);
+            this.predictionMarital.TabIndex = 19;
+            // 
+            // PredictionJob
+            // 
+            this.PredictionJob.FormattingEnabled = true;
+            this.PredictionJob.Location = new System.Drawing.Point(118, 107);
+            this.PredictionJob.Name = "PredictionJob";
+            this.PredictionJob.Size = new System.Drawing.Size(376, 21);
+            this.PredictionJob.TabIndex = 18;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(26, 344);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Personal Loan:";
             // 
             // label14
             // 
@@ -470,66 +532,17 @@
             this.MakePrediction.TabIndex = 0;
             this.MakePrediction.Text = "Predict";
             this.MakePrediction.UseVisualStyleBackColor = true;
+            this.MakePrediction.Click += new System.EventHandler(this.MakePrediction_Click);
             // 
-            // label15
+            // resultado
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(26, 344);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Personal Loan:";
-            // 
-            // PredictionJob
-            // 
-            this.PredictionJob.FormattingEnabled = true;
-            this.PredictionJob.Location = new System.Drawing.Point(118, 107);
-            this.PredictionJob.Name = "PredictionJob";
-            this.PredictionJob.Size = new System.Drawing.Size(376, 21);
-            this.PredictionJob.TabIndex = 18;
-            // 
-            // predictionMarital
-            // 
-            this.predictionMarital.FormattingEnabled = true;
-            this.predictionMarital.Location = new System.Drawing.Point(118, 144);
-            this.predictionMarital.Name = "predictionMarital";
-            this.predictionMarital.Size = new System.Drawing.Size(376, 21);
-            this.predictionMarital.TabIndex = 19;
-            // 
-            // PredictionEducation
-            // 
-            this.PredictionEducation.FormattingEnabled = true;
-            this.PredictionEducation.Location = new System.Drawing.Point(118, 180);
-            this.PredictionEducation.Name = "PredictionEducation";
-            this.PredictionEducation.Size = new System.Drawing.Size(376, 21);
-            this.PredictionEducation.TabIndex = 20;
-            // 
-            // predictionDebt
-            // 
-            this.predictionDebt.AutoSize = true;
-            this.predictionDebt.Location = new System.Drawing.Point(118, 224);
-            this.predictionDebt.Name = "predictionDebt";
-            this.predictionDebt.Size = new System.Drawing.Size(15, 14);
-            this.predictionDebt.TabIndex = 21;
-            this.predictionDebt.UseVisualStyleBackColor = true;
-            // 
-            // predictionHousing
-            // 
-            this.predictionHousing.AutoSize = true;
-            this.predictionHousing.Location = new System.Drawing.Point(118, 306);
-            this.predictionHousing.Name = "predictionHousing";
-            this.predictionHousing.Size = new System.Drawing.Size(15, 14);
-            this.predictionHousing.TabIndex = 22;
-            this.predictionHousing.UseVisualStyleBackColor = true;
-            // 
-            // PredictionLoan
-            // 
-            this.PredictionLoan.AutoSize = true;
-            this.PredictionLoan.Location = new System.Drawing.Point(118, 344);
-            this.PredictionLoan.Name = "PredictionLoan";
-            this.PredictionLoan.Size = new System.Drawing.Size(15, 14);
-            this.PredictionLoan.TabIndex = 23;
-            this.PredictionLoan.UseVisualStyleBackColor = true;
+            this.resultado.AutoSize = true;
+            this.resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.resultado.Location = new System.Drawing.Point(596, 33);
+            this.resultado.Name = "resultado";
+            this.resultado.Size = new System.Drawing.Size(25, 22);
+            this.resultado.TabIndex = 24;
+            this.resultado.Text = "...";
             // 
             // UserInterface
             // 
@@ -597,6 +610,7 @@
         private System.Windows.Forms.ComboBox PredictionEducation;
         private System.Windows.Forms.ComboBox predictionMarital;
         private System.Windows.Forms.ComboBox PredictionJob;
+        private System.Windows.Forms.Label resultado;
     }
 }
 
