@@ -1,4 +1,4 @@
-﻿<h1> CAPSTONE PROJECT:</h1>
+﻿<h1 align="center"> CAPSTONE PROJECT: BANK TERM DEPOSIT</h1>
  
 This is an academic project to learn how to implement a desicion tree in order to tackle a problem which require predictions using the 
 C# programming language.
@@ -10,16 +10,21 @@ windows forms app.
 
 
 DOWNLOAD:
+
 If you want to execute this program you can download the code directly from the Github repository (link below), and run it in any
 enviroment that can compile C# and run Windows Forms .net Framework applications. 
 
 Github repository link:
 https://github.com/jairoRdgz/PI-FinalProyect
 
-Language used to implement the solution:
-C# 
+## Made By
+# Weketeam
++ [Antonio J. Cadavid](https://github.com/cadav1nci "Antonio J. Cadavid)
++ [Juan David Hernandez](https://github.com/juanher0825 "juanher0825)
++ [Alejandro Suarez](https://github.com/ASuarez10 "Alejandro Suarez)
++ [Jairo Rodriguez](https://github.com/jairoRdgz "jairoRdgz")
 
-
+[![forthebadge](https://forthebadge.com/images/badges/uses-c-sharp.svg)](https://forthebadge.com)
 IDE used to develop the solution:
 Visual studio 2019
 
