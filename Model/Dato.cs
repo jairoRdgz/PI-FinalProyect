@@ -9,17 +9,17 @@ namespace Proyecto_Integrador.Model
 {
     class Dato
     {
-        private int age;
+        private string age;
         private string job;
         private string marital;
         private string education;
         private string debt;
-        private int balance;
+        private string balance;
         private string housing;
         private string loan;
         private string y;
 
-        public Dato(int age, string job, string marital, string education, string debt, int balance, string housing, string loan, string y)
+        public Dato(string age, string job, string marital, string education, string debt, string balance, string housing, string loan, string y)
         {
             this.age = age;
             this.job = job;
@@ -32,12 +32,12 @@ namespace Proyecto_Integrador.Model
             this.y = y;
         }
 
-        public int Age { get => age; set => age = value; }
+        public string Age { get => age; set => age = value; }
         public string Job { get => job; set => job = value; }
         public string Marital { get => marital; set => marital = value; }
         public string Education { get => education; set => education = value; }
         public string Debt { get => debt; set => debt = value; }
-        public int Balance { get => balance; set => balance = value; }
+        public string Balance { get => balance; set => balance = value; }
         public string Housing { get => housing; set => housing = value; }
         public string Loan { get => loan; set => loan = value; }
         public string Y { get => y; set => y = value; }
