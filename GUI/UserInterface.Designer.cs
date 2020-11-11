@@ -90,6 +90,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.Home.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -167,6 +168,7 @@
             this.Home.Controls.Add(this.tabPage1);
             this.Home.Controls.Add(this.tabPage2);
             this.Home.Controls.Add(this.tabPage3);
+            this.Home.Controls.Add(this.tabPage4);
             this.Home.Location = new System.Drawing.Point(16, 15);
             this.Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Home.Name = "Home";
@@ -398,7 +400,7 @@
             this.resultado.AutoSize = true;
             this.resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultado.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.resultado.Location = new System.Drawing.Point(751, 146);
+            this.resultado.Location = new System.Drawing.Point(693, 178);
             this.resultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.resultado.Name = "resultado";
             this.resultado.Size = new System.Drawing.Size(0, 32);
@@ -595,6 +597,7 @@
             // 
             // MakePrediction
             // 
+            this.MakePrediction.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MakePrediction.Location = new System.Drawing.Point(337, 539);
             this.MakePrediction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MakePrediction.Name = "MakePrediction";
@@ -606,6 +609,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(79, 535);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 48);
@@ -643,6 +647,16 @@
             this.label18.Size = new System.Drawing.Size(72, 23);
             this.label18.TabIndex = 29;
             this.label18.Text = "result:";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1337, 654);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tree visualization";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // UserInterface
             // 
@@ -717,6 +731,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 
