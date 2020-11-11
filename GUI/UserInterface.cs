@@ -371,22 +371,141 @@ namespace Proyecto_Integrador
             if (predictions.getDatos() == null)
             {
                 predictions.addDato(predicted);
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+                resultado.Text = $"Based on our information \n{name} will say '{y}' to acquiring a \nterm deposit with the bank";
             }
             else if (predictions.getDatos().Contains(predicted))
             {
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+                resultado.Text = $"Based on our information \n{name} will say '{y}' to acquiring a \nterm deposit with the bank";
             }
             else
             {
                 predictions.addDato(predicted);
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription \ninto the bank plan";
+                resultado.Text = $"Based on our information \n{name} will say '{y}' to acquiring a \nterm deposit with the bank";
             }
         }
 
         private void MakePrediction_Click(object sender, EventArgs e)
         {
             prediction();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
+
+        private void clearFields()
+        {
+            predictionName.Clear();
+            predictionAge.Clear();
+            PredictionJob.ResetText();
+            predictionMarital.ResetText();
+            PredictionEducation.ResetText();
+            predictionDebt.Checked=false;
+            predictionHousing.Checked = false;
+            PredictionLoan.Checked = false;
+            predictionBalance.ResetText();
+            resultado.Text = "";
+        }
+
+        private void PredictionJob_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void predictionHousing_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void predictionDebt_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PredictionEducation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void predictionMarital_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PredictionLoan_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void predictionBalance_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void predictionAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void predictionName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserInterface_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
