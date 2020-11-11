@@ -405,6 +405,7 @@ namespace Proyecto_Integrador
             predictionHousing.Checked = false;
             PredictionLoan.Checked = false;
             predictionBalance.ResetText();
+            resultado.Text = "";
         }
 
         private void PredictionJob_SelectedIndexChanged(object sender, EventArgs e)

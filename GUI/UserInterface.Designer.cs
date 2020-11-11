@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea51 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend51 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea52 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend52 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea53 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend53 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title21 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea54 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend54 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title22 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea55 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend55 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea56 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend56 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea57 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend57 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea58 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend58 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title23 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea59 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend59 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title24 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea60 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend60 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.path = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -213,17 +213,17 @@
             // 
             // ageChart
             // 
-            chartArea51.Name = "ChartArea1";
-            this.ageChart.ChartAreas.Add(chartArea51);
-            legend51.Name = "Legend1";
-            this.ageChart.Legends.Add(legend51);
+            chartArea56.Name = "ChartArea1";
+            this.ageChart.ChartAreas.Add(chartArea56);
+            legend56.Name = "Legend1";
+            this.ageChart.Legends.Add(legend56);
             this.ageChart.Location = new System.Drawing.Point(20, 28);
             this.ageChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ageChart.Name = "ageChart";
-            series51.ChartArea = "ChartArea1";
-            series51.Legend = "Legend1";
-            series51.Name = "Series1";
-            this.ageChart.Series.Add(series51);
+            series56.ChartArea = "ChartArea1";
+            series56.Legend = "Legend1";
+            series56.Name = "Series1";
+            this.ageChart.Series.Add(series56);
             this.ageChart.Size = new System.Drawing.Size(396, 290);
             this.ageChart.TabIndex = 11;
             this.ageChart.Text = "chart1";
@@ -282,77 +282,77 @@
             // 
             // jobChart
             // 
-            chartArea52.Name = "ChartArea1";
-            this.jobChart.ChartAreas.Add(chartArea52);
-            legend52.Name = "Legend1";
-            this.jobChart.Legends.Add(legend52);
+            chartArea57.Name = "ChartArea1";
+            this.jobChart.ChartAreas.Add(chartArea57);
+            legend57.Name = "Legend1";
+            this.jobChart.Legends.Add(legend57);
             this.jobChart.Location = new System.Drawing.Point(413, 22);
             this.jobChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jobChart.Name = "jobChart";
-            series52.ChartArea = "ChartArea1";
-            series52.Legend = "Legend1";
-            series52.Name = "Series1";
-            this.jobChart.Series.Add(series52);
+            series57.ChartArea = "ChartArea1";
+            series57.Legend = "Legend1";
+            series57.Name = "Series1";
+            this.jobChart.Series.Add(series57);
             this.jobChart.Size = new System.Drawing.Size(521, 321);
             this.jobChart.TabIndex = 5;
             this.jobChart.Text = "chart5";
             // 
             // housingChart
             // 
-            chartArea53.Name = "ChartArea1";
-            this.housingChart.ChartAreas.Add(chartArea53);
-            legend53.Name = "Legend1";
-            this.housingChart.Legends.Add(legend53);
+            chartArea58.Name = "ChartArea1";
+            this.housingChart.ChartAreas.Add(chartArea58);
+            legend58.Name = "Legend1";
+            this.housingChart.Legends.Add(legend58);
             this.housingChart.Location = new System.Drawing.Point(708, 366);
             this.housingChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.housingChart.Name = "housingChart";
-            series53.ChartArea = "ChartArea1";
-            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series53.Legend = "Legend1";
-            series53.Name = "Series1";
-            this.housingChart.Series.Add(series53);
+            series58.ChartArea = "ChartArea1";
+            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series58.Legend = "Legend1";
+            series58.Name = "Series1";
+            this.housingChart.Series.Add(series58);
             this.housingChart.Size = new System.Drawing.Size(593, 255);
             this.housingChart.TabIndex = 4;
             this.housingChart.Text = "HOUSING";
-            title21.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title21.Name = "HOUSING";
-            this.housingChart.Titles.Add(title21);
+            title23.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title23.Name = "HOUSING";
+            this.housingChart.Titles.Add(title23);
             // 
             // debtChart
             // 
-            chartArea54.Name = "ChartArea1";
-            this.debtChart.ChartAreas.Add(chartArea54);
-            legend54.Name = "Legend1";
-            this.debtChart.Legends.Add(legend54);
+            chartArea59.Name = "ChartArea1";
+            this.debtChart.ChartAreas.Add(chartArea59);
+            legend59.Name = "Legend1";
+            this.debtChart.Legends.Add(legend59);
             this.debtChart.Location = new System.Drawing.Point(33, 366);
             this.debtChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.debtChart.Name = "debtChart";
-            series54.ChartArea = "ChartArea1";
-            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series54.Legend = "Legend1";
-            series54.Name = "Series1";
-            this.debtChart.Series.Add(series54);
+            series59.ChartArea = "ChartArea1";
+            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series59.Legend = "Legend1";
+            series59.Name = "Series1";
+            this.debtChart.Series.Add(series59);
             this.debtChart.Size = new System.Drawing.Size(609, 255);
             this.debtChart.TabIndex = 3;
             this.debtChart.Text = "DEBT";
-            title22.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title22.Name = "DEBT";
-            this.debtChart.Titles.Add(title22);
+            title24.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title24.Name = "DEBT";
+            this.debtChart.Titles.Add(title24);
             // 
             // maritalChart
             // 
-            chartArea55.Name = "ChartArea1";
-            this.maritalChart.ChartAreas.Add(chartArea55);
-            legend55.Name = "Legend1";
-            this.maritalChart.Legends.Add(legend55);
+            chartArea60.Name = "ChartArea1";
+            this.maritalChart.ChartAreas.Add(chartArea60);
+            legend60.Name = "Legend1";
+            this.maritalChart.Legends.Add(legend60);
             this.maritalChart.Location = new System.Drawing.Point(920, 22);
             this.maritalChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.maritalChart.Name = "maritalChart";
-            series55.ChartArea = "ChartArea1";
-            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series55.Legend = "Legend1";
-            series55.Name = "Series1";
-            this.maritalChart.Series.Add(series55);
+            series60.ChartArea = "ChartArea1";
+            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series60.Legend = "Legend1";
+            series60.Name = "Series1";
+            this.maritalChart.Series.Add(series60);
             this.maritalChart.Size = new System.Drawing.Size(447, 321);
             this.maritalChart.TabIndex = 2;
             this.maritalChart.Text = "MARITAL";
@@ -395,12 +395,12 @@
             // resultado
             // 
             this.resultado.AutoSize = true;
-            this.resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultado.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.resultado.Location = new System.Drawing.Point(807, 146);
+            this.resultado.Location = new System.Drawing.Point(751, 146);
             this.resultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.resultado.Name = "resultado";
-            this.resultado.Size = new System.Drawing.Size(0, 36);
+            this.resultado.Size = new System.Drawing.Size(0, 25);
             this.resultado.TabIndex = 24;
             // 
             // PredictionLoan
