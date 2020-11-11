@@ -55,7 +55,7 @@ namespace Proyecto_Integrador
             {
                 String[] valores = lineas[i].Split(';');
 
-                list.addDato(new Dato(valores[0], valores[1], valores[2], valores[3],valores[4], valores[5], valores[6], valores[7], valores[8]));
+                list.addDato(new Dato(Int32.Parse(valores[0]), valores[1], valores[2], valores[3],valores[4], Int32.Parse(valores[5]), valores[6], valores[7], valores[16]));
             }   
             fill();
             loadCharts();
@@ -138,48 +138,48 @@ namespace Proyecto_Integrador
 
         private void ageChartInfo()
         {
-            ////[20,30)
-            //int group1 = 0;
-            ////[30,40)
-            //int group2 = 0;
-            ////[40,50)
-            //int group3 = 0;
-            ////[50,60)
-            //int group4 = 0;
-            ////(+60)
-            //int group5 = 0;
+            //[20,30)
+            int group1 = 0;
+            //[30,40)
+            int group2 = 0;
+            //[40,50)
+            int group3 = 0;
+            //[50,60)
+            int group4 = 0;
+            //(+60)
+            int group5 = 0;
 
-            //for (int i = 0; i < list.getDatos().Count; i++)
-            //{
-            //    int age = list.getDatos().ElementAt(i).Age;
-            //    if (age > 20 && age <= 30)
-            //    {
-            //        group1++;
-            //        Console.WriteLine(group1 + "");
-            //    }
-            //    else if (age > 31 && age <= 40)
-            //    {
-            //        group2++;
-            //    }
-            //    else if (age > 41 && age <= 50)
-            //    {
-            //        group3++;
-            //    }
-            //    else if (age > 51 && age <= 60)
-            //    {
-            //        group4++;
-            //    }
-            //    else if (age>60){
-            //        group5++;
-            //    }
+            for (int i = 0; i < list.getDatos().Count; i++)
+            {
+                int age = list.getDatos().ElementAt(i).Age;
+                if (age > 20 && age <= 30)
+                {
+                    group1++;
+                    Console.WriteLine(group1 + "");
+                }
+                else if (age > 31 && age <= 40)
+                {
+                    group2++;
+                }
+                else if (age > 41 && age <= 50)
+                {
+                    group3++;
+                }
+                else if (age > 51 && age <= 60)
+                {
+                    group4++;
+                }
+                else if (age>60){
+                    group5++;
+                }
 
 
-            //}
-            //ageChart.Series["Series1"].Points.AddXY("20 - 30 ", group1);
-            //ageChart.Series["Series1"].Points.AddXY("30 - 40 ", group2);
-            //ageChart.Series["Series1"].Points.AddXY("40 - 50 ", group3);
-            //ageChart.Series["Series1"].Points.AddXY("50 - 60 ", group4);
-            //ageChart.Series["Series1"].Points.AddXY("+60", group5);
+            }
+            ageChart.Series["Series1"].Points.AddXY("20 - 30 ", group1);
+            ageChart.Series["Series1"].Points.AddXY("30 - 40 ", group2);
+            ageChart.Series["Series1"].Points.AddXY("40 - 50 ", group3);
+            ageChart.Series["Series1"].Points.AddXY("50 - 60 ", group4);
+            ageChart.Series["Series1"].Points.AddXY("+60", group5);
 
 
         }
@@ -354,12 +354,12 @@ namespace Proyecto_Integrador
         {
             DatoList predictions = new DatoList();
             string name = predictionName.Text;
-            string age = predictionAge.Text;
+            int age = Int16.Parse(predictionAge.Text);
             string job = PredictionJob.Text;
             string marital = predictionMarital.Text;
             string education = PredictionEducation.Text;
             string debt = predictionDebt.Checked ? "yes" : "no";
-            string balance = predictionBalance.Text;
+            int balance = Int16.Parse(predictionBalance.Text);
             string housing = predictionHousing.Checked ? "yes" : "no";
             string loan = PredictionLoan.Checked ? "yes" : "no";
 
