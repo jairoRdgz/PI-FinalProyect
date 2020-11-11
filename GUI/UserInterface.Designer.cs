@@ -655,7 +655,8 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1337, 654);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tree visualization";
+            this.tabPage4.Text = "Visualize tree";
+            this.tabPage4.ToolTipText = "Visualize tree";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // UserInterface
