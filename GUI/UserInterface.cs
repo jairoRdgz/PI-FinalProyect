@@ -371,16 +371,16 @@ namespace Proyecto_Integrador
             if (predictions.getDatos() == null)
             {
                 predictions.addDato(predicted);
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+                resultado.Text = $"Based on our information \n{name} will say '{y}' to acquiring a \nterm deposit with the bank";
             }
             else if (predictions.getDatos().Contains(predicted))
             {
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+                resultado.Text = $"Based on our information \n{name} will say '{y}' to acquiring a \nterm deposit with the bank";
             }
             else
             {
                 predictions.addDato(predicted);
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription \ninto the bank plan";
+                resultado.Text = $"Based on our information \n{name} will say '{y}' to acquiring a \nterm deposit with the bank";
             }
         }
 
@@ -499,6 +499,11 @@ namespace Proyecto_Integrador
         }
 
         private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserInterface_Load(object sender, EventArgs e)
         {
 
         }

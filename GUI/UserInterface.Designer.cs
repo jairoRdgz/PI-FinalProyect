@@ -669,6 +669,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserInterface";
             this.Text = "Client predictor";
+            this.Load += new System.EventHandler(this.UserInterface_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
             this.Home.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
