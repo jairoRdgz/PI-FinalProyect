@@ -22,15 +22,17 @@ namespace Proyecto_Integrador
             initializeTable();
             fillFiltros();
             fillTreeSelection();
-            
+            fillPredictionForm();
+
+
         }
 
-        public void initializePredictions()
+      /**  public void initializePredictions()
         {
 
             foreach (var item in list.JobList)
             {
-                PredictionJob.Items.Add(item);
+                predictionJob.Items.Add(item);
             }
 
             foreach (var item in list.MaritalList)
@@ -40,9 +42,9 @@ namespace Proyecto_Integrador
 
             foreach (var item in list.EducationList)
             {
-                PredictionEducation.Items.Add(item);
+                predictionEducation.Items.Add(item);
             }
-        }
+        }**/
 
         public void loadData()
         {
@@ -59,7 +61,7 @@ namespace Proyecto_Integrador
             }   
             fill();
             loadCharts();
-            initializePredictions();
+            //initializePredictions();
         }
 
         public void initializeTable()
@@ -363,9 +365,9 @@ namespace Proyecto_Integrador
             DatoList predictions = new DatoList();
             string name = predictionName.Text;
             string age = predictionAge.Text;
-            string job = PredictionJob.Text;
+            string job = predictionJob.Text;
             string marital = predictionMarital.Text;
-            string education = PredictionEducation.Text;
+            string education = predictionEducation.Text;
             string debt = predictionDebt.Checked ? "yes" : "no";
             string balance = predictionBalance.Text;
             string housing = predictionHousing.Checked ? "yes" : "no";
@@ -416,7 +418,38 @@ namespace Proyecto_Integrador
 
         private void fillPredictionForm() {
           
-            predictionAge.Items.Add("[20-28]");
+            predictionAge.Items.Add("[20 - 28]");
+            predictionAge.Items.Add("[29 - 35]");
+            predictionAge.Items.Add("[36 - 45]");
+            predictionAge.Items.Add("[46 - 60]");
+            predictionAge.Items.Add("60 +");
+
+            predictionJob.Items.Add("unemployed");
+            predictionJob.Items.Add("services");
+            predictionJob.Items.Add("management");
+            predictionJob.Items.Add("blue-collar");
+            predictionJob.Items.Add("self-employed");
+            predictionJob.Items.Add("technician");
+            predictionJob.Items.Add("entrepreneur");
+            predictionJob.Items.Add("admin.");
+            predictionJob.Items.Add("student");
+            predictionJob.Items.Add("retired");
+
+            predictionEducation.Items.Add("primary");
+            predictionEducation.Items.Add("secondary");
+            predictionEducation.Items.Add("tertiary");
+            predictionEducation.Items.Add("unknown");
+
+            predictionMarital.Items.Add("married");
+            predictionMarital.Items.Add("single");
+            predictionMarital.Items.Add("divorced");
+
+            predictionBalance.Items.Add("0");
+            predictionBalance.Items.Add("[0 - 1000]");
+            predictionBalance.Items.Add("[1001 - 5000]");
+            predictionBalance.Items.Add("[5001 - 10000]");
+            predictionBalance.Items.Add("[10001 - 20000]");
+            predictionBalance.Items.Add("20000 +");
         }
 
         private void label16_Click(object sender, EventArgs e)
@@ -435,6 +468,11 @@ namespace Proyecto_Integrador
         }
 
         private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
