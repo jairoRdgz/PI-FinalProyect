@@ -22,6 +22,7 @@ namespace Proyecto_Integrador
             InitializeComponent();
             initializeTable();
             fillFiltros();
+            fillTreeSelection();
             
         }
 
@@ -91,6 +92,12 @@ namespace Proyecto_Integrador
             filtros.Items.Add("HOUSING");
             filtros.Items.Add("LOAN");
             filtros.Items.Add("DEPOSIT");
+        }
+
+        public void fillTreeSelection()
+        {
+            treeSelection.Items.Add("self-implemented");
+            treeSelection.Items.Add("Accord library");
         }
 
         public void fill()
@@ -388,7 +395,35 @@ namespace Proyecto_Integrador
 
         private void MakePrediction_Click(object sender, EventArgs e)
         {
-            prediction();
+            string a = treeSelection.Text;
+            if (a.Equals("self-implemented"))
+            {
+                //prediccion del aebol propio
+                prediction();
+            }
+            else if (a.Equals("Accord library"))
+            {
+                //prediccion arbol libreria
+
+            }
+            else {
+                //alert "please choose a valid option"
+                string message = "please choose a valid option";
+                string title = "Warning";
+                MessageBox.Show(message, title);
+            }
+           
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultado_Click(object sender, EventArgs e)
+        {
+
         }
     }
+
 }

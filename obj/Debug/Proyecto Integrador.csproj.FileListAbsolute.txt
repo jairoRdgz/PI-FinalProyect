@@ -48,3 +48,15 @@ C:\Users\Juan\Documents\Universidad Icesi\6 Semestre\Proyecto Integrador\Proyect
 C:\Users\Juan\Documents\Universidad Icesi\6 Semestre\Proyecto Integrador\Proyectos C#\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CoreCompileInputs.cache
 C:\Users\Juan\Documents\Universidad Icesi\6 Semestre\Proyecto Integrador\Proyectos C#\PI-FinalProyect\obj\Debug\Proyecto Integrador.exe
 C:\Users\Juan\Documents\Universidad Icesi\6 Semestre\Proyecto Integrador\Proyectos C#\PI-FinalProyect\obj\Debug\Proyecto Integrador.pdb
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.dll.config
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.MachineLearning.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Statistics.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.MachineLearning.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Statistics.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CopyComplete
