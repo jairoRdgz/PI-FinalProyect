@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_Integrador.Model;
+using Accord.MachineLearning.DecisionTrees.Learning;
+using Accord.MachineLearning.DecisionTrees.Pruning;
+using Accord.MachineLearning.DecisionTrees.Rules;
+using Accord.MachineLearning.DecisionTrees;
 
 namespace Proyecto_Integrador
 {
@@ -60,6 +64,7 @@ namespace Proyecto_Integrador
             fill();
             loadCharts();
             initializePredictions();
+            BankPrediction();
         }
 
         public void initializeTable()
@@ -389,6 +394,46 @@ namespace Proyecto_Integrador
         private void MakePrediction_Click(object sender, EventArgs e)
         {
             prediction();
+        }
+        
+        public void BankPrediction()
+        {
+            string a = "../../data/DatasetV2.csv";
+            String[] lineas = File.ReadAllLines(a);
+            int[] outputs = new int[lineas.Length];
+            int[][] inputs = null;
+
+            for (int i = 1; i < lineas.Length; i++)
+            {
+                String[] valores = lineas[i].Split(';');
+                inputs[i] = new int[] { Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), Convert.ToInt16(valores[2]), Convert.ToInt16(valores[3]), Convert.ToInt16(valores[4]), Convert.ToInt16(valores[5]), Convert.ToInt16(valores[6]), Convert.ToInt16(valores[7]) };
+
+                outputs[i] = Convert.ToInt16(valores[8]);
+            }
+
+            ID3Learning teacher = new ID3Learning() 
+            { 
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("AGE", 5),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("JOB", 12),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("MARITAL", 3),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("EDUCATION", 4),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("DEBT", 2),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("BALANCE", 6),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("HOUSING", 2),
+                new Accord.MachineLearning.DecisionTrees.DecisionVariable("LOAN", 2),
+
+            };
+
+            DecisionTree tree = teacher.Learn(inputs, outputs);
+
+            double error = new Accord.Math.Optimization.Losses.ZeroOneLoss(outputs).Loss(tree.Decide(inputs));
+
+            //mandar la variable error a un label que me muestre el error que tiene el arbol
+            int[] input = new int[] { 4, 10, 2, 1, 0, 0, 0, 0 };
+            int prediccion = tree.Decide(input);
+
+            string predijo = prediccion == 1 ? "yes" : "no";
+            Console.WriteLine(predijo);
         }
     }
 }
