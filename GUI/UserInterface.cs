@@ -395,38 +395,37 @@ namespace Proyecto_Integrador
         {
             prediction();
         }
-        
+
         public void BankPrediction()
         {
-            string a = "../../data/DatasetV2.csv";
-            String[] lineas = File.ReadAllLines(a);
-            int[] outputs = new int[lineas.Length];
-            int[][] inputs = null;
 
-            for (int i = 1; i < lineas.Length; i++)
+            var codebook = new Accord.Statistics.Filters.Codification(table);
+            DataTable symbols = codebook.Apply(table);
+
+            int[][] inputs = DataTableToMatrix(symbols, new string[] { "AGE", "JOB", "MARITAL", "EDUCATION", "DEBT", "BALANCE", "HOUSING", "LOAN" });
+            int[][] outputs = DataTableToMatrix(symbols, new string[] { "DEPOSIT" });
+            int[] output = new int[outputs.Length];
+            for (int i = 0; i < outputs.Length; i++)
             {
-                String[] valores = lineas[i].Split(';');
-                inputs[i] = new int[] { Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), Convert.ToInt16(valores[2]), Convert.ToInt16(valores[3]), Convert.ToInt16(valores[4]), Convert.ToInt16(valores[5]), Convert.ToInt16(valores[6]), Convert.ToInt16(valores[7]) };
-
-                outputs[i] = Convert.ToInt16(valores[8]);
+                output[i] = outputs[i][0];
             }
 
-            ID3Learning teacher = new ID3Learning() 
-            { 
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("AGE", 5),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("JOB", 12),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("MARITAL", 3),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("EDUCATION", 4),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("DEBT", 2),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("BALANCE", 6),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("HOUSING", 2),
-                new Accord.MachineLearning.DecisionTrees.DecisionVariable("LOAN", 2),
+            ID3Learning teacher = new ID3Learning()
+            {
+                new DecisionVariable("AGE", 5),
+                new DecisionVariable("JOB", 12),
+                new DecisionVariable("MARITAL", 3),
+                new DecisionVariable("EDUCATION", 4),
+                new DecisionVariable("DEBT", 2),
+                new DecisionVariable("BALANCE", 6),
+                new DecisionVariable("HOUSING", 2),
+                new DecisionVariable("LOAN", 2)
 
             };
 
-            DecisionTree tree = teacher.Learn(inputs, outputs);
+            DecisionTree tree = teacher.Learn(inputs, output);
 
-            double error = new Accord.Math.Optimization.Losses.ZeroOneLoss(outputs).Loss(tree.Decide(inputs));
+            double error = new Accord.Math.Optimization.Losses.ZeroOneLoss(output).Loss(tree.Decide(inputs));
 
             //mandar la variable error a un label que me muestre el error que tiene el arbol
             int[] input = new int[] { 4, 10, 2, 1, 0, 0, 0, 0 };
@@ -435,5 +434,24 @@ namespace Proyecto_Integrador
             string predijo = prediccion == 1 ? "yes" : "no";
             Console.WriteLine(predijo);
         }
+
+        public int[][] DataTableToMatrix(DataTable table, string[] columns)
+        {
+            int[][] matrix = new int[table.Rows.Count][];
+            for (int i = 0; i < matrix.Length; i++)
+                matrix[i] = new int[columns.Length];
+
+            for (int r = 0; r < table.Rows.Count; r++)
+            {
+                DataRow row = table.Rows[r];
+                for (int c = 0; c < columns.Length; c++)
+                {
+                    matrix[r][c] = (int)row[columns[c]];
+                }
+            }
+
+            return matrix;
+        }
     }
+   
 }

@@ -70,3 +70,15 @@ C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyec
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CopyComplete
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\obj\Debug\Proyecto Integrador.exe
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\obj\Debug\Proyecto Integrador.pdb
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.dll.config
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.MachineLearning.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Statistics.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.MachineLearning.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Statistics.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CopyComplete
