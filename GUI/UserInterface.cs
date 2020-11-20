@@ -414,6 +414,11 @@ namespace Proyecto_Integrador
            
         }
 
+        private void fillPredictionForm() {
+          
+            predictionAge.Items.Add("[20-28]");
+        }
+
         private void label16_Click(object sender, EventArgs e)
         {
 
