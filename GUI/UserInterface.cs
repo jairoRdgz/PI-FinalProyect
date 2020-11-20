@@ -122,7 +122,12 @@ namespace Proyecto_Integrador
         //this method filters the table
         private void filtrado_TextChanged(object sender, EventArgs e)
         {
-            table.DefaultView.RowFilter = $"{filtros.Text} LIKE '{filtrado.Text}%'";
+
+
+                table.DefaultView.RowFilter = $"{filtros.Text} LIKE '{filtrado.Text}%'";
+                
+            
+            
         }
 
         //this method loads the charts
