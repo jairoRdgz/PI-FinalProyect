@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_Integrador.Model;
-
 namespace Proyecto_Integrador
 {
     public partial class UserInterface : Form
@@ -426,6 +425,11 @@ namespace Proyecto_Integrador
         }
 
         private void PredictionJob_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }
