@@ -424,6 +424,11 @@ namespace Proyecto_Integrador
         {
 
         }
+
+        private void PredictionJob_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
