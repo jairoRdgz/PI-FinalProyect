@@ -376,8 +376,38 @@ namespace Proyecto_Integrador
 
         private void MakePrediction_Click(object sender, EventArgs e)
         {
-            prediction();
+            string a = desicionTree.Text;
+            if (a.Equals("self-implemented"))
+            {
+                //prediccion del aebol propio
+                prediction();
+            }
+            else if (a.Equals("Accord library"))
+            {
+                //prediccion arbol libreria
+
+            }
+            else
+            {
+                //alert "please choose a valid option"
+                string message = "please choose a valid option";
+                string title = "Warning";
+                MessageBox.Show(message, title);
+            }
+
         }
+    
+        private void clearForm(object sender, EventArgs e)
+        {
+            predictionAge.SelectedIndex = -1;
+            predictionJob.SelectedIndex = -1;
+            predictionEducation.SelectedIndex = -1;
+            predictionMarital.SelectedIndex = -1;
+            predictionBalance.SelectedIndex = -1;
+            desicionTree.SelectedIndex = -1;
+            predictionName.Text = "";
+
+        }   
 
         private void fillPredictionForm()
         {
@@ -416,8 +446,8 @@ namespace Proyecto_Integrador
             predictionBalance.Items.Add("20000 +");
 
             //desicion tree
-            desicionTree.Items.Add("self implemented");
-            desicionTree.Items.Add("Library");
+            desicionTree.Items.Add("self - implemented");
+            desicionTree.Items.Add("Accord library");
         }
 
         public void BankPrediction()
@@ -502,6 +532,8 @@ namespace Proyecto_Integrador
         {
 
         }
+
+        
     }
    
 }

@@ -65,6 +65,15 @@
             this.debtChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.maritalChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.desicionTree = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.predictionBalance = new System.Windows.Forms.ComboBox();
+            this.predictionEducation = new System.Windows.Forms.ComboBox();
+            this.predictionMarital = new System.Windows.Forms.ComboBox();
+            this.predictionJob = new System.Windows.Forms.ComboBox();
+            this.predictionAge = new System.Windows.Forms.ComboBox();
             this.resultado = new System.Windows.Forms.Label();
             this.PredictionLoan = new System.Windows.Forms.CheckBox();
             this.predictionHousing = new System.Windows.Forms.CheckBox();
@@ -80,15 +89,7 @@
             this.predictionName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.MakePrediction = new System.Windows.Forms.Button();
-            this.predictionAge = new System.Windows.Forms.ComboBox();
-            this.predictionJob = new System.Windows.Forms.ComboBox();
-            this.predictionMarital = new System.Windows.Forms.ComboBox();
-            this.predictionEducation = new System.Windows.Forms.ComboBox();
-            this.predictionBalance = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.desicionTree = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.Home.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -123,7 +124,7 @@
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(16, 16);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(129, 28);
             this.btnLoad.TabIndex = 33;
@@ -138,7 +139,7 @@
             this.filtros.Items.AddRange(new object[] {
             ""});
             this.filtros.Location = new System.Drawing.Point(65, 54);
-            this.filtros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filtros.Margin = new System.Windows.Forms.Padding(4);
             this.filtros.Name = "filtros";
             this.filtros.Size = new System.Drawing.Size(181, 24);
             this.filtros.TabIndex = 26;
@@ -147,7 +148,7 @@
             // 
             this.tablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaDatos.Location = new System.Drawing.Point(12, 87);
-            this.tablaDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tablaDatos.Margin = new System.Windows.Forms.Padding(4);
             this.tablaDatos.Name = "tablaDatos";
             this.tablaDatos.RowHeadersWidth = 51;
             this.tablaDatos.Size = new System.Drawing.Size(1281, 548);
@@ -156,7 +157,7 @@
             // filtrado
             // 
             this.filtrado.Location = new System.Drawing.Point(284, 55);
-            this.filtrado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filtrado.Margin = new System.Windows.Forms.Padding(4);
             this.filtrado.Name = "filtrado";
             this.filtrado.Size = new System.Drawing.Size(456, 22);
             this.filtrado.TabIndex = 37;
@@ -168,7 +169,7 @@
             this.Home.Controls.Add(this.tabPage2);
             this.Home.Controls.Add(this.tabPage3);
             this.Home.Location = new System.Drawing.Point(16, 15);
-            this.Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home.Margin = new System.Windows.Forms.Padding(4);
             this.Home.Name = "Home";
             this.Home.SelectedIndex = 0;
             this.Home.Size = new System.Drawing.Size(1345, 683);
@@ -183,9 +184,9 @@
             this.tabPage1.Controls.Add(this.btnLoad);
             this.tabPage1.Controls.Add(this.path);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1337, 654);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data";
@@ -204,9 +205,9 @@
             this.tabPage2.Controls.Add(this.debtChart);
             this.tabPage2.Controls.Add(this.maritalChart);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1337, 654);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Graphics";
@@ -288,7 +289,7 @@
             legend2.Name = "Legend1";
             this.jobChart.Legends.Add(legend2);
             this.jobChart.Location = new System.Drawing.Point(413, 22);
-            this.jobChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jobChart.Margin = new System.Windows.Forms.Padding(4);
             this.jobChart.Name = "jobChart";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
@@ -305,7 +306,7 @@
             legend3.Name = "Legend1";
             this.housingChart.Legends.Add(legend3);
             this.housingChart.Location = new System.Drawing.Point(708, 366);
-            this.housingChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.housingChart.Margin = new System.Windows.Forms.Padding(4);
             this.housingChart.Name = "housingChart";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -326,7 +327,7 @@
             legend4.Name = "Legend1";
             this.debtChart.Legends.Add(legend4);
             this.debtChart.Location = new System.Drawing.Point(33, 366);
-            this.debtChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.debtChart.Margin = new System.Windows.Forms.Padding(4);
             this.debtChart.Name = "debtChart";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -347,7 +348,7 @@
             legend5.Name = "Legend1";
             this.maritalChart.Legends.Add(legend5);
             this.maritalChart.Location = new System.Drawing.Point(920, 22);
-            this.maritalChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maritalChart.Margin = new System.Windows.Forms.Padding(4);
             this.maritalChart.Name = "maritalChart";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -360,6 +361,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.desicionTree);
             this.tabPage3.Controls.Add(this.label17);
@@ -385,13 +387,102 @@
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.MakePrediction);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(1337, 654);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Predictions";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(628, 95);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 17);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "Tree implementation";
+            // 
+            // desicionTree
+            // 
+            this.desicionTree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.desicionTree.FormattingEnabled = true;
+            this.desicionTree.Location = new System.Drawing.Point(772, 92);
+            this.desicionTree.Name = "desicionTree";
+            this.desicionTree.Size = new System.Drawing.Size(141, 24);
+            this.desicionTree.TabIndex = 32;
+            this.desicionTree.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(72, 41);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(129, 17);
+            this.label17.TabIndex = 31;
+            this.label17.Text = "Subject information\r\n";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(58, 401);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 50);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "Results\r\n:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // predictionBalance
+            // 
+            this.predictionBalance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.predictionBalance.FormattingEnabled = true;
+            this.predictionBalance.Location = new System.Drawing.Point(399, 194);
+            this.predictionBalance.Name = "predictionBalance";
+            this.predictionBalance.Size = new System.Drawing.Size(113, 24);
+            this.predictionBalance.TabIndex = 29;
+            // 
+            // predictionEducation
+            // 
+            this.predictionEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.predictionEducation.FormattingEnabled = true;
+            this.predictionEducation.Location = new System.Drawing.Point(190, 194);
+            this.predictionEducation.Name = "predictionEducation";
+            this.predictionEducation.Size = new System.Drawing.Size(113, 24);
+            this.predictionEducation.TabIndex = 28;
+            // 
+            // predictionMarital
+            // 
+            this.predictionMarital.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.predictionMarital.FormattingEnabled = true;
+            this.predictionMarital.Location = new System.Drawing.Point(191, 144);
+            this.predictionMarital.Name = "predictionMarital";
+            this.predictionMarital.Size = new System.Drawing.Size(113, 24);
+            this.predictionMarital.TabIndex = 27;
+            // 
+            // predictionJob
+            // 
+            this.predictionJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.predictionJob.FormattingEnabled = true;
+            this.predictionJob.Location = new System.Drawing.Point(397, 144);
+            this.predictionJob.Name = "predictionJob";
+            this.predictionJob.Size = new System.Drawing.Size(113, 24);
+            this.predictionJob.TabIndex = 26;
+            // 
+            // predictionAge
+            // 
+            this.predictionAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.predictionAge.FormattingEnabled = true;
+            this.predictionAge.Location = new System.Drawing.Point(399, 96);
+            this.predictionAge.Name = "predictionAge";
+            this.predictionAge.Size = new System.Drawing.Size(113, 24);
+            this.predictionAge.TabIndex = 25;
+            this.predictionAge.SelectedIndexChanged += new System.EventHandler(this.predictionAge_SelectedIndexChanged);
             // 
             // resultado
             // 
@@ -408,7 +499,7 @@
             // 
             this.PredictionLoan.AutoSize = true;
             this.PredictionLoan.Location = new System.Drawing.Point(528, 259);
-            this.PredictionLoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PredictionLoan.Margin = new System.Windows.Forms.Padding(4);
             this.PredictionLoan.Name = "PredictionLoan";
             this.PredictionLoan.Size = new System.Drawing.Size(18, 17);
             this.PredictionLoan.TabIndex = 23;
@@ -418,7 +509,7 @@
             // 
             this.predictionHousing.AutoSize = true;
             this.predictionHousing.Location = new System.Drawing.Point(338, 260);
-            this.predictionHousing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.predictionHousing.Margin = new System.Windows.Forms.Padding(4);
             this.predictionHousing.Name = "predictionHousing";
             this.predictionHousing.Size = new System.Drawing.Size(18, 17);
             this.predictionHousing.TabIndex = 22;
@@ -428,7 +519,7 @@
             // 
             this.predictionDebt.AutoSize = true;
             this.predictionDebt.Location = new System.Drawing.Point(178, 261);
-            this.predictionDebt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.predictionDebt.Margin = new System.Windows.Forms.Padding(4);
             this.predictionDebt.Name = "predictionDebt";
             this.predictionDebt.Size = new System.Drawing.Size(18, 17);
             this.predictionDebt.TabIndex = 21;
@@ -518,7 +609,7 @@
             // predictionName
             // 
             this.predictionName.Location = new System.Drawing.Point(190, 99);
-            this.predictionName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.predictionName.Margin = new System.Windows.Forms.Padding(4);
             this.predictionName.Name = "predictionName";
             this.predictionName.Size = new System.Drawing.Size(113, 22);
             this.predictionName.TabIndex = 2;
@@ -536,7 +627,7 @@
             // MakePrediction
             // 
             this.MakePrediction.Location = new System.Drawing.Point(1058, 88);
-            this.MakePrediction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MakePrediction.Margin = new System.Windows.Forms.Padding(4);
             this.MakePrediction.Name = "MakePrediction";
             this.MakePrediction.Size = new System.Drawing.Size(156, 44);
             this.MakePrediction.TabIndex = 0;
@@ -544,94 +635,16 @@
             this.MakePrediction.UseVisualStyleBackColor = true;
             this.MakePrediction.Click += new System.EventHandler(this.MakePrediction_Click);
             // 
-            // predictionAge
+            // button1
             // 
-            this.predictionAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.predictionAge.FormattingEnabled = true;
-            this.predictionAge.Location = new System.Drawing.Point(399, 96);
-            this.predictionAge.Name = "predictionAge";
-            this.predictionAge.Size = new System.Drawing.Size(113, 24);
-            this.predictionAge.TabIndex = 25;
-            this.predictionAge.SelectedIndexChanged += new System.EventHandler(this.predictionAge_SelectedIndexChanged);
-            // 
-            // predictionJob
-            // 
-            this.predictionJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.predictionJob.FormattingEnabled = true;
-            this.predictionJob.Location = new System.Drawing.Point(397, 144);
-            this.predictionJob.Name = "predictionJob";
-            this.predictionJob.Size = new System.Drawing.Size(113, 24);
-            this.predictionJob.TabIndex = 26;
-            // 
-            // predictionMarital
-            // 
-            this.predictionMarital.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.predictionMarital.FormattingEnabled = true;
-            this.predictionMarital.Location = new System.Drawing.Point(191, 144);
-            this.predictionMarital.Name = "predictionMarital";
-            this.predictionMarital.Size = new System.Drawing.Size(113, 24);
-            this.predictionMarital.TabIndex = 27;
-            // 
-            // predictionEducation
-            // 
-            this.predictionEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.predictionEducation.FormattingEnabled = true;
-            this.predictionEducation.Location = new System.Drawing.Point(190, 194);
-            this.predictionEducation.Name = "predictionEducation";
-            this.predictionEducation.Size = new System.Drawing.Size(113, 24);
-            this.predictionEducation.TabIndex = 28;
-            // 
-            // predictionBalance
-            // 
-            this.predictionBalance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.predictionBalance.FormattingEnabled = true;
-            this.predictionBalance.Location = new System.Drawing.Point(399, 194);
-            this.predictionBalance.Name = "predictionBalance";
-            this.predictionBalance.Size = new System.Drawing.Size(113, 24);
-            this.predictionBalance.TabIndex = 29;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(58, 401);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 50);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "Results\r\n:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(72, 41);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(129, 17);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "Subject information\r\n";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // desicionTree
-            // 
-            this.desicionTree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.desicionTree.FormattingEnabled = true;
-            this.desicionTree.Location = new System.Drawing.Point(772, 92);
-            this.desicionTree.Name = "desicionTree";
-            this.desicionTree.Size = new System.Drawing.Size(113, 24);
-            this.desicionTree.TabIndex = 32;
-            this.desicionTree.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(628, 95);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 17);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Tree implementation";
+            this.button1.Location = new System.Drawing.Point(1058, 180);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 44);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.clearForm);
             // 
             // UserInterface
             // 
@@ -639,7 +652,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 702);
             this.Controls.Add(this.Home);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserInterface";
             this.Text = "Client predictor";
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
@@ -705,6 +718,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox desicionTree;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button1;
     }
 }
 
