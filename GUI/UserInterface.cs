@@ -637,7 +637,7 @@ namespace Proyecto_Integrador
 
         private void visualizeTee(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=G2ZLI3Wilpk&t=2013s");
+            System.Diagnostics.Process.Start("https://sendeyo.com/up/d/4b62857ba3");
         }
     }
    
