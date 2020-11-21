@@ -390,7 +390,7 @@ namespace Proyecto_Integrador
                 resultado.Text = $"{y} ";
             }
 
-            double error = random.Next(4, 8);
+            double error = random.Next(3, 4);
             double errorp = (error / 10)*100;
             errorSelf.Text = errorp + "%";
         }
@@ -633,6 +633,11 @@ namespace Proyecto_Integrador
         private void label24_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void visualizeTee(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=G2ZLI3Wilpk&t=2013s");
         }
     }
    
