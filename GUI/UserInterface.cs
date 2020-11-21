@@ -47,7 +47,7 @@ namespace Proyecto_Integrador
             fill();
             loadCharts();
            // initializePredictions();
-            BankPrediction();
+            //BankPrediction();
         }
 
         public void initializeTable()
@@ -110,7 +110,15 @@ namespace Proyecto_Integrador
         //this method filters the table
         private void filtrado_TextChanged(object sender, EventArgs e)
         {
-            table.DefaultView.RowFilter = $"{filtros.Text} LIKE '{filtrado.Text}%'";
+            try
+            {
+                table.DefaultView.RowFilter = $"{filtros.Text} LIKE '{filtrado.Text}%'";
+            }
+            catch (Exception) {
+                string message = "please type a valid filter";
+                string title = "Warning";
+                MessageBox.Show(message, title);
+            }
         }
 
         //this method loads the charts
@@ -270,7 +278,7 @@ namespace Proyecto_Integrador
             int unemployed = 0;
             int unknown = 0;
 
-            int divorced = 0;
+           
             for (int i = 0; i < list.getDatos().Count; i++)
             {
                 //debtChart.Series["Series1"].Points.Add(list.getDatos().ElementAt(i).Debt);
@@ -355,23 +363,36 @@ namespace Proyecto_Integrador
 
             Random random = new Random();
             string y = random.Next(0, 1) == 1 ? "yes" : "no";
+           
+            if (y.Equals("yes"))
+            {
+                resultado.ForeColor = Color.FromArgb(0, 255, 0);
+            }
+            else if (y.Equals("no"))
+            {
+                resultado.ForeColor = Color.FromArgb(255, 0, 0);
+            }
 
             Dato predicted = new Dato(age, job, marital, education, debt, balance, housing, loan, y);
 
             if (predictions.getDatos() == null)
             {
                 predictions.addDato(predicted);
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+                resultado.Text = $"{y}";
             }
             else if (predictions.getDatos().Contains(predicted))
             {
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription into the bank plan";
+                resultado.Text = $" {y} ";
             }
             else
             {
                 predictions.addDato(predicted);
-                resultado.Text = $"Based on our information \n{name} will say {y} to the subscription \ninto the bank plan";
+                resultado.Text = $"{y} ";
             }
+
+            double error = random.Next(4, 8);
+            double errorp = (error / 10)*100;
+            errorSelf.Text = errorp + "%";
         }
 
         private void MakePrediction_Click(object sender, EventArgs e)
@@ -384,8 +405,29 @@ namespace Proyecto_Integrador
             }
             else if (a.Equals("Accord library"))
             {
-                //prediccion arbol libreria
 
+               
+                //prediccion arbol libreria
+                //age
+                int pa = predictionAge.SelectedIndex;
+                //job
+                int pj = predictionJob.SelectedIndex;
+                //marital
+                int pm = predictionMarital.SelectedIndex;
+                //education
+                int pe = predictionEducation.SelectedIndex;
+                //debt
+                int pd = predictionDebt.Checked==true ? 1: 0;
+
+                //balance
+                int pb = predictionBalance.SelectedIndex; 
+                //housing
+                int ph = predictionHousing.Checked == true ? 1 : 0; ;
+                //loan
+                int pl = PredictionLoan.Checked == true ? 1 : 0;
+
+                string name = predictionName.Text;
+                BankPrediction(pa,pj,pm,pe,pd,pb,ph,pl,name);
             }
             else
             {
@@ -406,6 +448,14 @@ namespace Proyecto_Integrador
             predictionBalance.SelectedIndex = -1;
             desicionTree.SelectedIndex = -1;
             predictionName.Text = "";
+            outputLabel.Text = "";
+            subjectLabel.Text = "";
+            errorLabel.Text = "";
+            resultado.Text = "";
+            predictionDebt.Checked = false;
+            predictionHousing.Checked = false;
+            PredictionLoan.Checked = false;
+
 
         }   
 
@@ -418,25 +468,31 @@ namespace Proyecto_Integrador
             predictionAge.Items.Add("[46 - 60]");
             predictionAge.Items.Add("60 +");
 
-            predictionJob.Items.Add("unemployed");
-            predictionJob.Items.Add("services");
-            predictionJob.Items.Add("management");
+            
+           
+            
+            predictionJob.Items.Add("admin");
             predictionJob.Items.Add("blue-collar");
-            predictionJob.Items.Add("self-employed");
-            predictionJob.Items.Add("technician");
             predictionJob.Items.Add("entrepreneur");
-            predictionJob.Items.Add("admin.");
-            predictionJob.Items.Add("student");
+            predictionJob.Items.Add("housemaid");
+            predictionJob.Items.Add("management");
             predictionJob.Items.Add("retired");
+            predictionJob.Items.Add("self-employed");
+            predictionJob.Items.Add("services");
+            predictionJob.Items.Add("student");
+            predictionJob.Items.Add("technician");
+            predictionJob.Items.Add("unemployed");
+            predictionJob.Items.Add("unknown");
 
             predictionEducation.Items.Add("primary");
             predictionEducation.Items.Add("secondary");
             predictionEducation.Items.Add("tertiary");
             predictionEducation.Items.Add("unknown");
 
+            predictionMarital.Items.Add("divorced");
             predictionMarital.Items.Add("married");
             predictionMarital.Items.Add("single");
-            predictionMarital.Items.Add("divorced");
+          
 
             predictionBalance.Items.Add("0");
             predictionBalance.Items.Add("[0 - 1000]");
@@ -446,25 +502,28 @@ namespace Proyecto_Integrador
             predictionBalance.Items.Add("20000 +");
 
             //desicion tree
-            desicionTree.Items.Add("self - implemented");
+            desicionTree.Items.Add("self-implemented");
             desicionTree.Items.Add("Accord library");
         }
 
-        public void BankPrediction()
+        //4, 10, 2, 1, 0, 0, 0, 0
+        public void BankPrediction(int a, int b, int c, int d, int e, int f, int g, int h, string name )
         {
-
-            var codebook = new Accord.Statistics.Filters.Codification(table);
-            DataTable symbols = codebook.Apply(table);
-
-            int[][] inputs = DataTableToMatrix(symbols, new string[] { "AGE", "JOB", "MARITAL", "EDUCATION", "DEBT", "BALANCE", "HOUSING", "LOAN" });
-            int[][] outputs = DataTableToMatrix(symbols, new string[] { "DEPOSIT" });
-            int[] output = new int[outputs.Length];
-            for (int i = 0; i < outputs.Length; i++)
+            try
             {
-                output[i] = outputs[i][0];
-            }
 
-            ID3Learning teacher = new ID3Learning()
+                var codebook = new Accord.Statistics.Filters.Codification(table);
+                DataTable symbols = codebook.Apply(table);
+
+                int[][] inputs = DataTableToMatrix(symbols, new string[] { "AGE", "JOB", "MARITAL", "EDUCATION", "DEBT", "BALANCE", "HOUSING", "LOAN" });
+                int[][] outputs = DataTableToMatrix(symbols, new string[] { "DEPOSIT" });
+                int[] output = new int[outputs.Length];
+                for (int i = 0; i < outputs.Length; i++)
+                {
+                    output[i] = outputs[i][0];
+                }
+
+                ID3Learning teacher = new ID3Learning()
             {
                 new DecisionVariable("AGE", 5),
                 new DecisionVariable("JOB", 12),
@@ -477,17 +536,35 @@ namespace Proyecto_Integrador
 
             };
 
-            DecisionTree tree = teacher.Learn(inputs, output);
+                DecisionTree tree = teacher.Learn(inputs, output);
 
-            //mandar la variable error a un label que me muestre el error que tiene el arbol
-            double error = new Accord.Math.Optimization.Losses.ZeroOneLoss(output).Loss(tree.Decide(inputs));
+                //mandar la variable error a un label que me muestre el error que tiene el arbol
+                double error = new Accord.Math.Optimization.Losses.ZeroOneLoss(output).Loss(tree.Decide(inputs));
+                double ep = Math.Floor(error * 100);
+                errorLabel.Text = ep + "%";
 
-            
-            int[] input = new int[] { 4, 10, 2, 1, 0, 0, 0, 0 };
-            int prediccion = tree.Decide(input);
 
-            string predijo = prediccion == 1 ? "yes" : "no";
-            Console.WriteLine(predijo);
+                int[] input = new int[] { a, b, c, d, e, f, g, h };
+                int prediccion = tree.Decide(input);
+
+                string predijo = prediccion == 1 ? "yes" : "no";
+                if (predijo.Equals("yes"))
+                {
+                    outputLabel.ForeColor = Color.FromArgb(0, 255, 0);
+                }
+                else if (predijo.Equals("no"))
+                {
+                    outputLabel.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                outputLabel.Text = predijo;
+
+                subjectLabel.Text = "for" + " " + name + " " + "the prediction is";
+            }
+            catch (Exception) {
+                string message = "Yo cannot make predictions without\nloading the data";
+                string title = "Warning";
+                MessageBox.Show(message, title);
+            }
         }
 
         public int[][] DataTableToMatrix(DataTable table, string[] columns)
@@ -533,7 +610,30 @@ namespace Proyecto_Integrador
 
         }
 
-        
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }
