@@ -28,10 +28,16 @@ https://github.com/jairoRdgz/PI-FinalProyect
 + [Alejandro Suarez](https://github.com/ASuarez10 "ASuarez10")
 + [Jairo Rodriguez](https://github.com/jairoRdgz "jairoRdgz")
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
+# Videos
++ [Video 1](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Videos/Entrega%201/Final.mp4)
++ [Video 2](https://youtu.be/EMYna1j9EJ0)
++ [Video 3](https://youtu.be/JumY_YtpVKk)
 
 IDE used to develop the solution:
 Visual studio 2019
 
 Operative system:
 Windows 
+
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
