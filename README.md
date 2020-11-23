@@ -36,7 +36,8 @@ https://github.com/jairoRdgz/PI-FinalProyect
 IDE used to develop the solution:
 Visual studio 2019
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
-
 Operative system:
 Windows 
+
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
