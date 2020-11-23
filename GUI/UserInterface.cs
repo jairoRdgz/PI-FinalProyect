@@ -455,6 +455,8 @@ namespace Proyecto_Integrador
             predictionDebt.Checked = false;
             predictionHousing.Checked = false;
             PredictionLoan.Checked = false;
+            errorSelf.Text = "";
+
 
 
         }   
