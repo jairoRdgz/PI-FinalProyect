@@ -543,7 +543,7 @@ namespace Proyecto_Integrador
                 //mandar la variable error a un label que me muestre el error que tiene el arbol
                 double error = new Accord.Math.Optimization.Losses.ZeroOneLoss(output).Loss(tree.Decide(inputs));
                 double ep = Math.Floor(error * 100);
-                errorLabel.Text = ep + "%";
+                errorLabel.Text = ep + "%"+" "+"-"+" "+"("+error+")";
 
 
                 int[] input = new int[] { a, b, c, d, e, f, g, h };

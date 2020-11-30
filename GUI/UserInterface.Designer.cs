@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInterface));
             this.label1 = new System.Windows.Forms.Label();
             this.path = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -65,6 +66,17 @@
             this.debtChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.maritalChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.errorSelf = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.subjectLabel = new System.Windows.Forms.Label();
+            this.outputLabel = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.desicionTree = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -89,20 +101,11 @@
             this.predictionName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.MakePrediction = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.errorLabel = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.outputLabel = new System.Windows.Forms.Label();
-            this.subjectLabel = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.errorSelf = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.treeVisualizer = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
+            this.treeVisualizer = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.Home.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -114,6 +117,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.maritalChart)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -183,6 +188,7 @@
             this.Home.Controls.Add(this.tabPage2);
             this.Home.Controls.Add(this.tabPage3);
             this.Home.Controls.Add(this.tabPage4);
+            this.Home.Controls.Add(this.tabPage5);
             this.Home.Location = new System.Drawing.Point(16, 15);
             this.Home.Margin = new System.Windows.Forms.Padding(4);
             this.Home.Name = "Home";
@@ -230,17 +236,17 @@
             // 
             // ageChart
             // 
-            chartArea6.Name = "ChartArea1";
-            this.ageChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.ageChart.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.ageChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ageChart.Legends.Add(legend1);
             this.ageChart.Location = new System.Drawing.Point(20, 28);
             this.ageChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ageChart.Name = "ageChart";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.ageChart.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ageChart.Series.Add(series1);
             this.ageChart.Size = new System.Drawing.Size(396, 290);
             this.ageChart.TabIndex = 11;
             this.ageChart.Text = "chart1";
@@ -299,77 +305,77 @@
             // 
             // jobChart
             // 
-            chartArea7.Name = "ChartArea1";
-            this.jobChart.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.jobChart.Legends.Add(legend7);
+            chartArea2.Name = "ChartArea1";
+            this.jobChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.jobChart.Legends.Add(legend2);
             this.jobChart.Location = new System.Drawing.Point(413, 22);
             this.jobChart.Margin = new System.Windows.Forms.Padding(4);
             this.jobChart.Name = "jobChart";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.jobChart.Series.Add(series7);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.jobChart.Series.Add(series2);
             this.jobChart.Size = new System.Drawing.Size(521, 321);
             this.jobChart.TabIndex = 5;
             this.jobChart.Text = "chart5";
             // 
             // housingChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.housingChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.housingChart.Legends.Add(legend8);
+            chartArea3.Name = "ChartArea1";
+            this.housingChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.housingChart.Legends.Add(legend3);
             this.housingChart.Location = new System.Drawing.Point(708, 366);
             this.housingChart.Margin = new System.Windows.Forms.Padding(4);
             this.housingChart.Name = "housingChart";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.housingChart.Series.Add(series8);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.housingChart.Series.Add(series3);
             this.housingChart.Size = new System.Drawing.Size(593, 255);
             this.housingChart.TabIndex = 4;
             this.housingChart.Text = "HOUSING";
-            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title3.Name = "HOUSING";
-            this.housingChart.Titles.Add(title3);
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.Name = "HOUSING";
+            this.housingChart.Titles.Add(title1);
             // 
             // debtChart
             // 
-            chartArea9.Name = "ChartArea1";
-            this.debtChart.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.debtChart.Legends.Add(legend9);
+            chartArea4.Name = "ChartArea1";
+            this.debtChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.debtChart.Legends.Add(legend4);
             this.debtChart.Location = new System.Drawing.Point(33, 366);
             this.debtChart.Margin = new System.Windows.Forms.Padding(4);
             this.debtChart.Name = "debtChart";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.debtChart.Series.Add(series9);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.debtChart.Series.Add(series4);
             this.debtChart.Size = new System.Drawing.Size(609, 255);
             this.debtChart.TabIndex = 3;
             this.debtChart.Text = "DEBT";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Name = "DEBT";
-            this.debtChart.Titles.Add(title4);
+            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title2.Name = "DEBT";
+            this.debtChart.Titles.Add(title2);
             // 
             // maritalChart
             // 
-            chartArea10.Name = "ChartArea1";
-            this.maritalChart.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.maritalChart.Legends.Add(legend10);
+            chartArea5.Name = "ChartArea1";
+            this.maritalChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.maritalChart.Legends.Add(legend5);
             this.maritalChart.Location = new System.Drawing.Point(920, 22);
             this.maritalChart.Margin = new System.Windows.Forms.Padding(4);
             this.maritalChart.Name = "maritalChart";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.maritalChart.Series.Add(series10);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.maritalChart.Series.Add(series5);
             this.maritalChart.Size = new System.Drawing.Size(447, 321);
             this.maritalChart.TabIndex = 2;
             this.maritalChart.Text = "MARITAL";
@@ -419,6 +425,128 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Predictions";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(758, 430);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(117, 17);
+            this.label25.TabIndex = 45;
+            this.label25.Text = "Self-implemented";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(60, 430);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(84, 17);
+            this.label23.TabIndex = 44;
+            this.label23.Text = "Accord.NET";
+            // 
+            // errorSelf
+            // 
+            this.errorSelf.AutoSize = true;
+            this.errorSelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorSelf.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.errorSelf.Location = new System.Drawing.Point(871, 495);
+            this.errorSelf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorSelf.Name = "errorSelf";
+            this.errorSelf.Size = new System.Drawing.Size(0, 36);
+            this.errorSelf.TabIndex = 43;
+            this.errorSelf.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(746, 570);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(119, 36);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Output:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(755, 495);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(96, 36);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Error:";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // subjectLabel
+            // 
+            this.subjectLabel.AutoSize = true;
+            this.subjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectLabel.ForeColor = System.Drawing.Color.Lime;
+            this.subjectLabel.Location = new System.Drawing.Point(251, 344);
+            this.subjectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.subjectLabel.Name = "subjectLabel";
+            this.subjectLabel.Size = new System.Drawing.Size(0, 36);
+            this.subjectLabel.TabIndex = 39;
+            // 
+            // outputLabel
+            // 
+            this.outputLabel.AutoSize = true;
+            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Location = new System.Drawing.Point(206, 570);
+            this.outputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(0, 36);
+            this.outputLabel.TabIndex = 38;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(57, 570);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(119, 36);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Output:";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.errorLabel.Location = new System.Drawing.Point(225, 495);
+            this.errorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 36);
+            this.errorLabel.TabIndex = 36;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(57, 495);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 36);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Error:";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1058, 180);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 44);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.clearForm);
             // 
             // label18
             // 
@@ -660,128 +788,6 @@
             this.MakePrediction.UseVisualStyleBackColor = true;
             this.MakePrediction.Click += new System.EventHandler(this.MakePrediction_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1058, 180);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 44);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.clearForm);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(57, 495);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 36);
-            this.label19.TabIndex = 35;
-            this.label19.Text = "Error:";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // errorLabel
-            // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.errorLabel.Location = new System.Drawing.Point(225, 495);
-            this.errorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 36);
-            this.errorLabel.TabIndex = 36;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(57, 570);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(119, 36);
-            this.label20.TabIndex = 37;
-            this.label20.Text = "Output:";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
-            // 
-            // outputLabel
-            // 
-            this.outputLabel.AutoSize = true;
-            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputLabel.Location = new System.Drawing.Point(206, 570);
-            this.outputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(0, 36);
-            this.outputLabel.TabIndex = 38;
-            // 
-            // subjectLabel
-            // 
-            this.subjectLabel.AutoSize = true;
-            this.subjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subjectLabel.ForeColor = System.Drawing.Color.Lime;
-            this.subjectLabel.Location = new System.Drawing.Point(251, 344);
-            this.subjectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.subjectLabel.Name = "subjectLabel";
-            this.subjectLabel.Size = new System.Drawing.Size(0, 36);
-            this.subjectLabel.TabIndex = 39;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(755, 495);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(96, 36);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "Error:";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(746, 570);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(119, 36);
-            this.label22.TabIndex = 41;
-            this.label22.Text = "Output:";
-            // 
-            // errorSelf
-            // 
-            this.errorSelf.AutoSize = true;
-            this.errorSelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorSelf.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.errorSelf.Location = new System.Drawing.Point(871, 495);
-            this.errorSelf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.errorSelf.Name = "errorSelf";
-            this.errorSelf.Size = new System.Drawing.Size(0, 36);
-            this.errorSelf.TabIndex = 43;
-            this.errorSelf.Click += new System.EventHandler(this.label24_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(60, 430);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(84, 17);
-            this.label23.TabIndex = 44;
-            this.label23.Text = "Accord.NET";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(758, 430);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(117, 17);
-            this.label25.TabIndex = 45;
-            this.label25.Text = "Self-implemented";
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label24);
@@ -792,6 +798,15 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tree-visualization";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(466, 514);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(395, 17);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "*Since the tree is too big it has to be visualized in the browser";
             // 
             // treeVisualizer
             // 
@@ -804,14 +819,27 @@
             this.treeVisualizer.UseVisualStyleBackColor = true;
             this.treeVisualizer.Click += new System.EventHandler(this.visualizeTee);
             // 
-            // label24
+            // tabPage5
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(466, 514);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(395, 17);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "*Since the tree is too big it has to be visualized in the browser";
+            this.tabPage5.AutoScroll = true;
+            this.tabPage5.Controls.Add(this.pictureBox1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1337, 654);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "VisualizeTree";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_Integrador.Properties.Resources.moneyIcon;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 512);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // UserInterface
             // 
@@ -819,6 +847,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 702);
             this.Controls.Add(this.Home);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserInterface";
             this.Text = "Client predictor";
@@ -837,6 +866,9 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -901,6 +933,8 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button treeVisualizer;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
