@@ -335,9 +335,9 @@ namespace Proyecto_Integrador
 
               
             }
-          jobChart.Series["Series1"].Points.AddXY("Admin", admin);
-          jobChart.Series["Series1"].Points.AddXY("Blue-collar", blueCollar);
-           jobChart.Series["Series1"].Points.AddXY("Entrepreneur", entrepreneur);
+            jobChart.Series["Series1"].Points.AddXY("Admin", admin);
+            jobChart.Series["Series1"].Points.AddXY("Blue-collar", blueCollar);
+            jobChart.Series["Series1"].Points.AddXY("Entrepreneur", entrepreneur);
             jobChart.Series["Series1"].Points.AddXY("Housemaid", housemaid);
             jobChart.Series["Series1"].Points.AddXY("Management", blueCollar);
             jobChart.Series["Series1"].Points.AddXY("Retired", retired);
@@ -586,56 +586,6 @@ namespace Proyecto_Integrador
             }
 
             return matrix;
-        }
-
-        private void predictionAge_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void resultado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void visualizeTee(object sender, EventArgs e)
