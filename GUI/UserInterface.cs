@@ -33,6 +33,7 @@ namespace Proyecto_Integrador
 
         public void loadData()
         {
+
             //path of the dataset
             //it is inside the docs folder
             string a = "../../data/Dataset.csv";
@@ -640,6 +641,28 @@ namespace Proyecto_Integrador
         private void visualizeTee(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://sendeyo.com/up/d/4b62857ba3");
+        }
+
+        private void ZoomOut(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ZoomIn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Width -= 20;
+            pictureBox1.Height -= 20;
+        }
+        //zoom in
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Width += 20;
+            pictureBox1.Height += 20;
         }
     }
    
