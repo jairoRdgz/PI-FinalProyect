@@ -769,14 +769,16 @@ namespace Proyecto_Integrador
        
     
 
-        private void button2_Click_2(object sender, EventArgs e)
+       
+
+        
+        private void button2_Click_1(object sender, EventArgs e)
         {
             pictureBox1.Width += 200;
             pictureBox1.Height += 200;
-         
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void button3_Click_2(object sender, EventArgs e)
         {
             pictureBox1.Width -= 200;
             pictureBox1.Height -= 200;
