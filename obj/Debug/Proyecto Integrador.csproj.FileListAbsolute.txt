@@ -82,3 +82,15 @@ C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.xml
 C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.xml
 C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Accord.Statistics.xml
 C:\Users\Toño\Source\Repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CopyComplete
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.dll.config
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.dll
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.MachineLearning.dll
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.dll
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.Math.dll
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.Statistics.dll
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.xml
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.MachineLearning.xml
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.Math.xml
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.Math.Core.xml
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\bin\Debug\Accord.Statistics.xml
+C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\obj\Debug\Proyecto Integrador.csproj.CopyComplete

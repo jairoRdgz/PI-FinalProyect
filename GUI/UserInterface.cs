@@ -13,20 +13,31 @@ using Accord.MachineLearning.DecisionTrees.Learning;
 using Accord.MachineLearning.DecisionTrees.Pruning;
 using Accord.MachineLearning.DecisionTrees.Rules;
 using Accord.MachineLearning.DecisionTrees;
+using Microsoft.Office.Interop.Excel;
 
 namespace Proyecto_Integrador
 {
     public partial class UserInterface : Form
     {
         DatoList list = new DatoList();
-        DataTable table;
+        System.Data.DataTable table;
+        string[,] trabajo;
+        string[,] credito;
+        string[,] balance;
+        string[,] prestamo;
 
         public UserInterface()
         {
+            trabajo = new string[2,12];
+            credito = new string[2, 2];
+            balance = new string[2, 6];
+            prestamo = new string[2, 2];
             InitializeComponent();
             initializeTable();
             fillFiltros();
             fillPredictionForm();
+            fillMatrix();
+            CrearExcel();
         }
 
        
@@ -53,7 +64,7 @@ namespace Proyecto_Integrador
 
         public void initializeTable()
         {
-            table = new DataTable();
+            table = new System.Data.DataTable();
             table.Columns.Add("AGE");
             table.Columns.Add("JOB");
             table.Columns.Add("MARITAL");
@@ -471,9 +482,6 @@ namespace Proyecto_Integrador
             predictionAge.Items.Add("[46 - 60]");
             predictionAge.Items.Add("60 +");
 
-            
-           
-            
             predictionJob.Items.Add("admin");
             predictionJob.Items.Add("blue-collar");
             predictionJob.Items.Add("entrepreneur");
@@ -510,13 +518,14 @@ namespace Proyecto_Integrador
         }
 
         //4, 10, 2, 1, 0, 0, 0, 0
-        public void BankPrediction(int a, int b, int c, int d, int e, int f, int g, int h, string name )
+        public string BankPrediction(int a, int b, int c, int d, int e, int f, int g, int h, string name )
         {
+            string salida = "Vacio";
             try
             {
 
                 var codebook = new Accord.Statistics.Filters.Codification(table);
-                DataTable symbols = codebook.Apply(table);
+                System.Data.DataTable symbols = codebook.Apply(table);
 
                 int[][] inputs = DataTableToMatrix(symbols, new string[] { "AGE", "JOB", "MARITAL", "EDUCATION", "DEBT", "BALANCE", "HOUSING", "LOAN" });
                 int[][] outputs = DataTableToMatrix(symbols, new string[] { "DEPOSIT" });
@@ -560,6 +569,7 @@ namespace Proyecto_Integrador
                     outputLabel.ForeColor = Color.FromArgb(255, 0, 0);
                 }
                 outputLabel.Text = predijo;
+                salida = predijo;
 
                 subjectLabel.Text = "for" + " " + name + " " + "the prediction is";
             }
@@ -568,9 +578,10 @@ namespace Proyecto_Integrador
                 string title = "Warning";
                 MessageBox.Show(message, title);
             }
+            return salida;
         }
 
-        public int[][] DataTableToMatrix(DataTable table, string[] columns)
+        public int[][] DataTableToMatrix(System.Data.DataTable table, string[] columns)
         {
             int[][] matrix = new int[table.Rows.Count][];
             for (int i = 0; i < matrix.Length; i++)
@@ -613,6 +624,153 @@ namespace Proyecto_Integrador
         {
             pictureBox1.Width += 20;
             pictureBox1.Height += 20;
+        }
+
+        private void fillMatrix()
+        {
+            trabajo[0, 0] = "admin";
+            trabajo[1, 0] = "0";
+            trabajo[0, 1] = "blue-collar";
+            trabajo[1, 1] = "1";
+            trabajo[0, 2] = "entrepreneur";
+            trabajo[1, 2] = "2";
+            trabajo[0, 3] = "housemaid";
+            trabajo[1, 3] = "3";
+            trabajo[0, 4] = "management";
+            trabajo[1, 4] = "4";
+            trabajo[0, 5] = "retired";
+            trabajo[1, 5] = "5";
+            trabajo[0, 6] = "self-employed";
+            trabajo[1, 6] = "6";
+            trabajo[0, 7] = "services";
+            trabajo[1, 7] = "7";
+            trabajo[0, 8] = "student";
+            trabajo[1, 8] = "8";
+            trabajo[0, 9] = "technician";
+            trabajo[1, 9] = "9";
+            trabajo[0, 10] = "unemployed";
+            trabajo[1, 10] = "10";
+            trabajo[0, 11] = "unknown";
+            trabajo[1, 11] = "11";
+
+            credito[0, 0] = "no";
+            credito[1, 0] = "0";
+            credito[0, 1] = "yes";
+            credito[1, 1] = "1";
+
+            prestamo[0, 0] = "no";
+            prestamo[1, 0] = "0";
+            prestamo[0, 1] = "yes";
+            prestamo[1, 1] = "1";
+
+            balance[0, 0] = "0";
+            balance[1, 0] = "0";
+            balance[0, 1] = "[0 - 1000]";
+            balance[1, 1] = "1";
+            balance[0, 2] = "[1001 - 5000]";
+            balance[1, 2] = "2";
+            balance[0, 3] = "[5001 - 10000]";
+            balance[1, 3] = "3";
+            balance[0, 4] = "[10001 - 20000]";
+            balance[1, 4] = "4";
+            balance[0, 5] = "20000 +";
+            balance[1, 5] = "5";
+        }
+
+        private void CrearExcel()
+        {
+            loadData();
+
+            // Creamos un objeto Excel.
+            Microsoft.Office.Interop.Excel.Application Mi_Excel = default(Microsoft.Office.Interop.Excel.Application);
+            // Creamos un objeto WorkBook. Para crear el documento Excel.           
+            Workbook LibroExcel = default(Workbook);
+            // Creamos un objeto WorkSheet. Para crear la hoja del documento.
+            Worksheet HojaExcel = default(Worksheet);
+
+            // Iniciamos una instancia a Excel, y Hacemos visibles para ver como se va creando el reporte, 
+            // podemos hacerlo visible al final si se desea.
+            Mi_Excel = new Microsoft.Office.Interop.Excel.Application();
+            Mi_Excel.Visible = true;
+
+            /* Ahora creamos un nuevo documento y seleccionamos la primera hoja del 
+             * documento en la cual crearemos nuestro informe. 
+             */
+            // Creamos una instancia del Workbooks de excel.            
+            LibroExcel = Mi_Excel.Workbooks.Add();
+            // Creamos una instancia de la primera hoja de trabajo de excel            
+            HojaExcel = LibroExcel.Worksheets[1];
+            HojaExcel.Visible = Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetVisible;
+
+            // Hacemos esta hoja la visible en pantalla 
+            // (como seleccionamos la primera esto no es necesario
+            // si seleccionamos una diferente a la primera si lo
+            // necesitariamos).
+            HojaExcel.Activate();
+
+            /**
+            // Crear el encabezado de nuestro informe.
+            // La primera línea une las celdas y las convierte un en una sola.            
+            HojaExcel.Range["A1:E1"].Merge();
+            // La segunda línea Asigna el nombre del encabezado.
+            HojaExcel.Range["A1:E1"].Value = "----------------------------------------------";
+            // La tercera línea asigna negrita al titulo.
+            HojaExcel.Range["A1:E1"].Font.Bold = true;
+            // La cuarta línea signa un Size a titulo de 15.
+            HojaExcel.Range["A1:E1"].Font.Size = 15;
+
+            // Crear el subencabezado de nuestro informe
+            HojaExcel.Range["A2:E2"].Merge();
+            HojaExcel.Range["A2:E2"].Value = "ENCUESTA DE SATISFACCIÓN AL CLIENTE EXTERNO";
+            HojaExcel.Range["A2:E2"].Font.Italic = true;
+            HojaExcel.Range["A2:E2"].Font.Size = 13;
+            **/
+
+            Microsoft.Office.Interop.Excel.Range objCelda = HojaExcel.Range["A1", Type.Missing];
+            objCelda.Value = "Trabajo";
+
+            objCelda = HojaExcel.Range["B1", Type.Missing];
+            objCelda.Value = "Credito en mora";
+
+            objCelda = HojaExcel.Range["C1", Type.Missing];
+            objCelda.Value = "Balance de cuenta";
+
+            objCelda = HojaExcel.Range["D1", Type.Missing];
+            objCelda.Value = "Prestamos personal";
+
+            objCelda = HojaExcel.Range["E1", Type.Missing];
+            objCelda.Value = "Arbol propio";
+
+            objCelda = HojaExcel.Range["F1", Type.Missing];
+            objCelda.Value = "Arbol libreria";
+
+            for(int i = 0; i < 12; i++)
+            {
+                objCelda = HojaExcel.Range["A"+(i+2), Type.Missing];
+                objCelda.Value = trabajo[0,i];
+
+                for(int j = 0; j < 2; j++)
+                {
+                    objCelda = HojaExcel.Range["B" + (j + 2+i), Type.Missing];
+                    objCelda.Value = credito[0, j];
+
+                    for(int k = 0; k < 6; k++)
+                    {
+                        objCelda = HojaExcel.Range["C" + (k + 2+j), Type.Missing];
+                        objCelda.Value = balance[0, k];
+
+                        for(int l = 0; l < 2; l++)
+                        {
+                            objCelda = HojaExcel.Range["D" + (l + 2+k), Type.Missing];
+                            objCelda.Value = prestamo[0, l];
+                        }
+                    }
+                }
+            }
+
+            objCelda = HojaExcel.Range["F2", Type.Missing];
+            objCelda.Value = BankPrediction(1,1,1,1,1,1,1,1,"Aja");
+
         }
     }
    
