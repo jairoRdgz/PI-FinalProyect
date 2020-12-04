@@ -39,6 +39,7 @@ namespace Proyecto_Integrador
             fillPredictionForm();
             //fillMatrix();
             //CrearExcel();
+            pictureBox1.Image = Image.FromFile("../../media/arbol.jpg");
         }
 
        
@@ -759,6 +760,26 @@ namespace Proyecto_Integrador
 
 
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+       
+    
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            pictureBox1.Width += 200;
+            pictureBox1.Height += 200;
+         
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            pictureBox1.Width -= 200;
+            pictureBox1.Height -= 200;
         }
     }
    

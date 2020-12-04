@@ -99,3 +99,8 @@ C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.Data.L
 C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.dll
 C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.Interfaces.dll
 C:\Users\Alejandro Suarez\Source\Repos\PI-FinalProyect\bin\Debug\LinqToExcel.xml
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\LinqToExcel.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.Interfaces.dll
+C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\LinqToExcel.xml
