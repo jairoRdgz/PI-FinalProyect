@@ -14,6 +14,7 @@ using Accord.MachineLearning.DecisionTrees.Pruning;
 using Accord.MachineLearning.DecisionTrees.Rules;
 using Accord.MachineLearning.DecisionTrees;
 using Microsoft.Office.Interop.Excel;
+using LinqToExcel;
 
 namespace Proyecto_Integrador
 {
@@ -21,23 +22,23 @@ namespace Proyecto_Integrador
     {
         DatoList list = new DatoList();
         System.Data.DataTable table;
-        string[,] trabajo;
-        string[,] credito;
-        string[,] balance;
-        string[,] prestamo;
+        string[] trabajo;
+        string[] credito;
+        string[] balance;
+        string[] prestamo;
 
         public UserInterface()
         {
-            trabajo = new string[2,12];
-            credito = new string[2, 2];
-            balance = new string[2, 6];
-            prestamo = new string[2, 2];
+            trabajo = new string[12];
+            credito = new string[2];
+            balance = new string[6];
+            prestamo = new string[2];
             InitializeComponent();
             initializeTable();
             fillFiltros();
             fillPredictionForm();
-            fillMatrix();
-            CrearExcel();
+            //fillMatrix();
+            //CrearExcel();
         }
 
        
@@ -628,53 +629,31 @@ namespace Proyecto_Integrador
 
         private void fillMatrix()
         {
-            trabajo[0, 0] = "admin";
-            trabajo[1, 0] = "0";
-            trabajo[0, 1] = "blue-collar";
-            trabajo[1, 1] = "1";
-            trabajo[0, 2] = "entrepreneur";
-            trabajo[1, 2] = "2";
-            trabajo[0, 3] = "housemaid";
-            trabajo[1, 3] = "3";
-            trabajo[0, 4] = "management";
-            trabajo[1, 4] = "4";
-            trabajo[0, 5] = "retired";
-            trabajo[1, 5] = "5";
-            trabajo[0, 6] = "self-employed";
-            trabajo[1, 6] = "6";
-            trabajo[0, 7] = "services";
-            trabajo[1, 7] = "7";
-            trabajo[0, 8] = "student";
-            trabajo[1, 8] = "8";
-            trabajo[0, 9] = "technician";
-            trabajo[1, 9] = "9";
-            trabajo[0, 10] = "unemployed";
-            trabajo[1, 10] = "10";
-            trabajo[0, 11] = "unknown";
-            trabajo[1, 11] = "11";
+            trabajo[0] = "admin";
+            trabajo[1] = "blue-collar";
+            trabajo[2] = "entrepreneur";
+            trabajo[3] = "housemaid";
+            trabajo[4] = "management";
+            trabajo[5] = "retired";
+            trabajo[6] = "self-employed";
+            trabajo[7] = "services";
+            trabajo[8] = "student";
+            trabajo[9] = "technician";
+            trabajo[10] = "unemployed";
+            trabajo[11] = "unknown";
 
-            credito[0, 0] = "no";
-            credito[1, 0] = "0";
-            credito[0, 1] = "yes";
-            credito[1, 1] = "1";
+            credito[0] = "no";
+            credito[1] = "yes";
 
-            prestamo[0, 0] = "no";
-            prestamo[1, 0] = "0";
-            prestamo[0, 1] = "yes";
-            prestamo[1, 1] = "1";
+            prestamo[0] = "no";
+            prestamo[1] = "yes";
 
-            balance[0, 0] = "0";
-            balance[1, 0] = "0";
-            balance[0, 1] = "[0 - 1000]";
-            balance[1, 1] = "1";
-            balance[0, 2] = "[1001 - 5000]";
-            balance[1, 2] = "2";
-            balance[0, 3] = "[5001 - 10000]";
-            balance[1, 3] = "3";
-            balance[0, 4] = "[10001 - 20000]";
-            balance[1, 4] = "4";
-            balance[0, 5] = "20000 +";
-            balance[1, 5] = "5";
+            balance[0] = "0";
+            balance[1] = "[0 - 1000]";
+            balance[2] = "[1001 - 5000]";
+            balance[3] = "[5001 - 10000]";
+            balance[4] = "[10001 - 20000]";
+            balance[5] = "20000 +";
         }
 
         private void CrearExcel()
@@ -700,40 +679,86 @@ namespace Proyecto_Integrador
             
 
             Microsoft.Office.Interop.Excel.Range objCelda = HojaExcel.Range["A1", Type.Missing];
-            objCelda.Value = "Trabajo";
-
-            objCelda = HojaExcel.Range["B1", Type.Missing];
-            objCelda.Value = "Credito en mora";
-
-            objCelda = HojaExcel.Range["C1", Type.Missing];
-            objCelda.Value = "Balance de cuenta";
-
-            objCelda = HojaExcel.Range["D1", Type.Missing];
-            objCelda.Value = "Prestamos personal";
-
-            objCelda = HojaExcel.Range["E1", Type.Missing];
             objCelda.Value = "Arbol propio";
 
-            objCelda = HojaExcel.Range["F1", Type.Missing];
+            objCelda = HojaExcel.Range["B1", Type.Missing];
             objCelda.Value = "Arbol libreria";
 
 
-            //path of the dataset
-            //it is inside the docs folder
-            string filePath = "../../data/ExperimentData.xlsx";
-            string[] lineas = File.ReadAllLines(filePath);
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\Alejandro Suarez\source\repos\PI-FinalProyect\data\ExperimentData.xlsx");
+            Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Microsoft.Office.Interop.Excel.Range xlRange = xlWorksheet.UsedRange;
 
-            for (int i = 2; i < lineas.Length; i++)
+            for (int i = 1; i <= 288; i++)
             {
-                string[] valores = lineas[i].Split(';');
+                int t = 0;
+                int c = 0;
+                int b = 0;
+                int p = 0;
+
+                for (int j = 1; j <= 4; j++)
+                {
+
+                    if (j == 1)
+                    {
+                        string trabajoActual = xlRange.Cells[i, j].Value2.ToString();
+                        for (int k = 0; k < 12; k++)
+                        {
+                            if(trabajoActual == trabajo[k])
+                            {
+                                t = k;
+                                break;
+                            }
+                        }
+                    }else if (j == 2)
+                    {
+                        string creditoActual = xlRange.Cells[i, j].Value2.ToString();
+                        if(creditoActual == "yes")
+                        {
+                            c = 1;
+                        }
+                        else
+                        {
+                            c = 0;
+                        }
+                    }
+                    else if (j == 4)
+                    {
+                        string prestamoActual = xlRange.Cells[i, j].Value2.ToString();
+                        if (prestamoActual == "yes")
+                        {
+                            p = 1;
+                        }
+                        else
+                        {
+                            p = 0;
+                        }
+                    }
+                    else if (j == 3)
+                    {
+
+                        string balanceActual = xlRange.Cells[i, j].Value2.ToString();
+                        for (int k = 0; k < 6; k++)
+                        {
+                            if (balanceActual == balance[k])
+                            {
+                                b = k;
+                                break;
+                            }
+                        }
+
+                    }
+                }
+
+                objCelda = HojaExcel.Range["A" + (i + 1), Type.Missing];
+                objCelda.Value = "no";
+
+                objCelda = HojaExcel.Range["B"+(i+1), Type.Missing];
+                objCelda.Value = BankPrediction(1, t, 1, 1, c, b, 1, p, "Aja");
+
 
             }
-
-
-
-            objCelda = HojaExcel.Range["F2", Type.Missing];
-            objCelda.Value = BankPrediction(1,1,1,1,1,1,1,1,"Aja");
-
         }
     }
    
