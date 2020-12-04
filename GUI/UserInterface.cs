@@ -683,48 +683,21 @@ namespace Proyecto_Integrador
 
             // Creamos un objeto Excel.
             Microsoft.Office.Interop.Excel.Application Mi_Excel = default(Microsoft.Office.Interop.Excel.Application);
-            // Creamos un objeto WorkBook. Para crear el documento Excel.           
+                    
             Workbook LibroExcel = default(Workbook);
-            // Creamos un objeto WorkSheet. Para crear la hoja del documento.
             Worksheet HojaExcel = default(Worksheet);
 
-            // Iniciamos una instancia a Excel, y Hacemos visibles para ver como se va creando el reporte, 
-            // podemos hacerlo visible al final si se desea.
+          
             Mi_Excel = new Microsoft.Office.Interop.Excel.Application();
             Mi_Excel.Visible = true;
-
-            /* Ahora creamos un nuevo documento y seleccionamos la primera hoja del 
-             * documento en la cual crearemos nuestro informe. 
-             */
-            // Creamos una instancia del Workbooks de excel.            
-            LibroExcel = Mi_Excel.Workbooks.Add();
-            // Creamos una instancia de la primera hoja de trabajo de excel            
+         
+            LibroExcel = Mi_Excel.Workbooks.Add();         
             HojaExcel = LibroExcel.Worksheets[1];
             HojaExcel.Visible = Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetVisible;
 
-            // Hacemos esta hoja la visible en pantalla 
-            // (como seleccionamos la primera esto no es necesario
-            // si seleccionamos una diferente a la primera si lo
-            // necesitariamos).
             HojaExcel.Activate();
 
-            /**
-            // Crear el encabezado de nuestro informe.
-            // La primera línea une las celdas y las convierte un en una sola.            
-            HojaExcel.Range["A1:E1"].Merge();
-            // La segunda línea Asigna el nombre del encabezado.
-            HojaExcel.Range["A1:E1"].Value = "----------------------------------------------";
-            // La tercera línea asigna negrita al titulo.
-            HojaExcel.Range["A1:E1"].Font.Bold = true;
-            // La cuarta línea signa un Size a titulo de 15.
-            HojaExcel.Range["A1:E1"].Font.Size = 15;
-
-            // Crear el subencabezado de nuestro informe
-            HojaExcel.Range["A2:E2"].Merge();
-            HojaExcel.Range["A2:E2"].Value = "ENCUESTA DE SATISFACCIÓN AL CLIENTE EXTERNO";
-            HojaExcel.Range["A2:E2"].Font.Italic = true;
-            HojaExcel.Range["A2:E2"].Font.Size = 13;
-            **/
+            
 
             Microsoft.Office.Interop.Excel.Range objCelda = HojaExcel.Range["A1", Type.Missing];
             objCelda.Value = "Trabajo";
@@ -744,29 +717,19 @@ namespace Proyecto_Integrador
             objCelda = HojaExcel.Range["F1", Type.Missing];
             objCelda.Value = "Arbol libreria";
 
-            for(int i = 0; i < 12; i++)
+
+            //path of the dataset
+            //it is inside the docs folder
+            string filePath = "../../data/ExperimentData.xlsx";
+            string[] lineas = File.ReadAllLines(filePath);
+
+            for (int i = 2; i < lineas.Length; i++)
             {
-                objCelda = HojaExcel.Range["A"+(i+2), Type.Missing];
-                objCelda.Value = trabajo[0,i];
+                string[] valores = lineas[i].Split(';');
 
-                for(int j = 0; j < 2; j++)
-                {
-                    objCelda = HojaExcel.Range["B" + (j + 2+i), Type.Missing];
-                    objCelda.Value = credito[0, j];
-
-                    for(int k = 0; k < 6; k++)
-                    {
-                        objCelda = HojaExcel.Range["C" + (k + 2+j), Type.Missing];
-                        objCelda.Value = balance[0, k];
-
-                        for(int l = 0; l < 2; l++)
-                        {
-                            objCelda = HojaExcel.Range["D" + (l + 2+k), Type.Missing];
-                            objCelda.Value = prestamo[0, l];
-                        }
-                    }
-                }
             }
+
+
 
             objCelda = HojaExcel.Range["F2", Type.Missing];
             objCelda.Value = BankPrediction(1,1,1,1,1,1,1,1,"Aja");
