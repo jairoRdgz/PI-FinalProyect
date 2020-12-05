@@ -37,7 +37,7 @@ namespace Proyecto_Integrador.Model
 
         private void AddDato(string[] attributes, int id)
         {
-            Dato p = new Dato(attributes[0], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1]);
+            Dato p = new Dato(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5], attributes[6], attributes[7], attributes[8]);
 
             dataSetBank.Add(id + "", p);
         }
@@ -92,7 +92,7 @@ namespace Proyecto_Integrador.Model
                 Console.WriteLine("Biem");
                 // Read a text file line by line.  
                 string[] lines = File.ReadAllLines(dir);
-                string[] columns = lines[0].Split(',');
+                string[] columns = lines[0].Split(';');
 
                 //This for adds the columns on the data table and adds all the categories that can be filtered on the combo box
                 for (int i = 0; i < columns.Length; i++)
@@ -104,7 +104,7 @@ namespace Proyecto_Integrador.Model
                 for (int i = 1; i < lines.Length; i++)
                 {
                     //split the line by ","
-                    string[] aux = lines[i].Split(',');
+                    string[] aux = lines[i].Split(';');
                     addTestData(aux, i);
                     dt.Rows.Add(aux);
                 }
