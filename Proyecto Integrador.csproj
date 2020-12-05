@@ -101,6 +101,13 @@
     <Compile Include="DecisionTreeClassifier\Node.cs" />
     <Compile Include="DecisionTreeClassifier\OptimalSolution.cs" />
     <Compile Include="DecisionTreeClassifier\Query.cs" />
+    <EmbeddedResource Include="GUI\ResultClassification.resx" />
+    <Compile Include="GUI\ResultClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ResultClassification.Designer.cs">
+      <DependentUpon>ResultClassification.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +115,7 @@
       <DependentUpon>UserInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
+    <Compile Include="Model\DatoControl.cs" />
     <Compile Include="Model\Conecction.cs" />
     <Compile Include="Model\DatoList.cs" />
     <Compile Include="Model\Dato.cs" />

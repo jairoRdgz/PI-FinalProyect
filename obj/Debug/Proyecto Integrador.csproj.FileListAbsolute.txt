@@ -104,3 +104,9 @@ C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.Data.Linq.dll
 C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.dll
 C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\Remotion.Interfaces.dll
 C:\Users\Toño\Source\Repos\PI-FinalProyect\bin\Debug\LinqToExcel.xml
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\bin\Debug\LinqToExcel.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\bin\Debug\Remotion.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\bin\Debug\Remotion.Interfaces.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\bin\Debug\LinqToExcel.xml
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Proyecto Integrador\PI-FinalProyect\obj\Debug\Proyecto_Integrador.GUI.ResultClassification.resources

@@ -14,6 +14,7 @@ using Accord.MachineLearning.DecisionTrees.Pruning;
 using Accord.MachineLearning.DecisionTrees.Rules;
 using Accord.MachineLearning.DecisionTrees;
 using Microsoft.Office.Interop.Excel;
+using Proyecto_Integrador.DecisionTreeClassifier;
 using LinqToExcel;
 
 namespace Proyecto_Integrador
@@ -26,6 +27,11 @@ namespace Proyecto_Integrador
         string[] credito;
         string[] balance;
         string[] prestamo;
+
+        //tree things
+        DatoControl dm = new DatoControl();
+        DatoControl dmC = new DatoControl();
+
 
         public UserInterface()
         {
@@ -42,7 +48,63 @@ namespace Proyecto_Integrador
             pictureBox1.Image = Image.FromFile("../../media/arbol.jpg");
         }
 
-       
+        private void LoadDt()
+        {
+            table = dm.LoadCSV();
+        }
+
+        private void TrainData_Click(object sender, EventArgs e)
+        {
+            dmC.LoadCSV();
+
+            Dictionary<String, Dato> trainData = dmC.GetPatients();
+
+            DecisionTree<Dato> destree = new DecisionTree<Dato>(trainData);
+
+            List<Dato> rows = new List<Dato>();
+
+            foreach (String k in trainData.Keys)
+            {
+                rows.Add(trainData[k]);
+            }
+
+            Node<Dato> t = destree.BuildTree(rows);
+            //printTree(t, "");
+
+            dmC.LoadCSVTest();
+
+            Dictionary<String, Dato> test = dmC.GetClassifiedPatients();
+
+            List<String> classification = new List<string>();
+            foreach (String k in test.Keys)
+            {
+
+                classification.Add("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+
+
+                Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+            }
+
+            ResultClasification c = new ResultClasification(classification);
+            c.Show();
+        }
+
+        private void printTree(Node<Dato> root, String tab)
+        {
+            if (root != null && root.GetQuery() != null)
+            {
+                Console.WriteLine(tab + root.GetQuery().GetAttribute());
+            }
+
+
+            tab += "\t";
+            if (root.GetFalseNode() != null)
+                printTree(root.GetFalseNode(), tab);
+            if (root.GetTrueNode() != null)
+                printTree(root.GetTrueNode(), tab);
+        }
 
         public void loadData()
         {
@@ -766,12 +828,7 @@ namespace Proyecto_Integrador
         {
 
         }
-       
-    
 
-       
-
-        
         private void button2_Click_1(object sender, EventArgs e)
         {
             pictureBox1.Width += 200;
@@ -783,6 +840,8 @@ namespace Proyecto_Integrador
             pictureBox1.Width -= 200;
             pictureBox1.Height -= 200;
         }
+
+        
     }
    
 }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using Proyecto_Integrador.DecisionTreeClassifier;
 
 namespace Proyecto_Integrador.Model
 {
-    class Dato
+    class Dato : DatasetRow
     {
         private string age;
         private string job;
@@ -42,6 +43,18 @@ namespace Proyecto_Integrador.Model
         public string Loan { get => loan; set => loan = value; }
         public string Y { get => y; set => y = value; }
 
+        public string[] getAttributes()
+        {
+            string[] attributes = { "" + age, "" + job, "" + marital, "" + education, "" + debt, "" + balance, "" + loan, "" + y };
 
+            return attributes;
+        }
+
+        public static string[] getAttributesName()
+        {
+            string[] attributes = { "age", "job", "marital", "education", "debt", "balnace", "loan", "y" };
+
+            return attributes;
+        }
     }
 }
