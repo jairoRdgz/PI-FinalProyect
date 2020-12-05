@@ -20,24 +20,24 @@ namespace Proyecto_Integrador.Model
             this.classifiedBank = new Dictionary<string, Dato>();
         }
 
-        public Dictionary<String, Dato> GetPatients()
+        public Dictionary<String, Dato> GetBanks()
         {
             return this.dataSetBank;
         }
 
-        public Dictionary<String, Dato> GetClassifiedPatients()
+        public Dictionary<String, Dato> GetClassifiedBank()
         {
             return this.classifiedBank;
         }
 
-        private void addTestData(String[] attributes, int id)
+        private void addTestData(string[] attributes, int id)
         {
             AddDato(id+"", attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5], attributes[6], attributes[7], attributes[8]);
         }
 
-        private void AddDato(String[] attributes, int id)
+        private void AddDato(string[] attributes, int id)
         {
-            Dato p = new Dato(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5], attributes[6], attributes[7], attributes[8]);
+            Dato p = new Dato(attributes[0], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1], attributes[1]);
 
             dataSetBank.Add(id + "", p);
         }
@@ -53,13 +53,13 @@ namespace Proyecto_Integrador.Model
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            string dir = "../../data/Dataset.csv";
+            string dir = "../../data/DatasetV2.csv";
             if (File.Exists(dir))
             {
 
                 // Read a text file line by line.  
                 string[] lines = File.ReadAllLines(dir);
-                string[] columns = lines[0].Split(',');
+                string[] columns = lines[0].Split(';');
 
                 //This for adds the columns on the data table and adds all the categories that can be filtered on the combo box
 
@@ -70,7 +70,7 @@ namespace Proyecto_Integrador.Model
                 }
 
                 //This for adds the rows to the data table
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     //split the line by ","
                     string[] aux = lines[i].Split(';');
@@ -86,7 +86,7 @@ namespace Proyecto_Integrador.Model
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            string dir = "../../data/Dataset.csv";
+            string dir = "../../data/DatasetV2.csv";
             if (File.Exists(dir))
             {
                 Console.WriteLine("Biem");

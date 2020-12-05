@@ -57,7 +57,7 @@ namespace Proyecto_Integrador
         {
             dmC.LoadCSV();
 
-            Dictionary<String, Dato> trainData = dmC.GetPatients();
+            Dictionary<String, Dato> trainData = dmC.GetBanks();
 
             DecisionTree<Dato> destree = new DecisionTree<Dato>(trainData);
 
@@ -73,7 +73,7 @@ namespace Proyecto_Integrador
 
             dmC.LoadCSVTest();
 
-            Dictionary<String, Dato> test = dmC.GetClassifiedPatients();
+            Dictionary<String, Dato> test = dmC.GetClassifiedBank();
 
             List<String> classification = new List<string>();
             foreach (String k in test.Keys)

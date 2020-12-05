@@ -8,11 +8,14 @@ namespace Proyecto_Integrador.DecisionTreeClassifier
 {
     class Query<T> where T:DatasetRow
     {
+        private string[] attributes;
+
         private int attribute;
         private string value;
 
         public Query(int attribute, string value)
         {
+            this.attributes = Model.Dato.getAttributesName();
             this.attribute = attribute;
             this.value = value;
         }
@@ -34,7 +37,7 @@ namespace Proyecto_Integrador.DecisionTreeClassifier
         public bool Compare(T example)
         {
             bool response;
-            String temp = example.getAttributes()[this.attribute];
+            string temp = example.getAttributes()[this.attribute];
 
 
             if (this.isNumeric(this.attribute))
@@ -54,9 +57,20 @@ namespace Proyecto_Integrador.DecisionTreeClassifier
             return this.attribute;
         }
 
-        public String GetValue()
+        public string GetValue()
         {
             return this.value;
+        }
+
+        public override string ToString()
+        {
+            string oper = " == ";
+
+            if (this.isNumeric(this.attribute))
+                oper = " >= ";
+
+            return "Is "+this.attributes[this.attribute]+oper+this.value+"?";
+
         }
     }
 }

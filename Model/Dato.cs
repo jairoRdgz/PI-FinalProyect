@@ -45,14 +45,14 @@ namespace Proyecto_Integrador.Model
 
         public string[] getAttributes()
         {
-            string[] attributes = { "" + age, "" + job, "" + marital, "" + education, "" + debt, "" + balance, "" + loan, "" + y };
+            string[] attributes = { "" + age, "" + job, "" + marital, "" + education, "" + debt, "" + balance, "" +housing, "" + loan, "" + y };
 
             return attributes;
         }
 
         public static string[] getAttributesName()
         {
-            string[] attributes = { "age", "job", "marital", "education", "debt", "balnace", "loan", "y" };
+            string[] attributes = { "age", "job", "marital", "education", "debt", "balance", "housing", "loan", "y" };
 
             return attributes;
         }
