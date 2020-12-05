@@ -31,6 +31,7 @@ namespace Proyecto_Integrador
         //tree things
         DatoControl dm = new DatoControl();
         DatoControl dmC = new DatoControl();
+        List<String> resultadosArbol = new List<string>();
 
 
         public UserInterface()
@@ -74,7 +75,7 @@ namespace Proyecto_Integrador
             dmC.LoadCSVTest();
 
             Dictionary<String, Dato> test = dmC.GetClassifiedBank();
-
+            
             List<String> classification = new List<string>();
             foreach (String k in test.Keys)
             {
@@ -82,13 +83,15 @@ namespace Proyecto_Integrador
                 classification.Add("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
                     "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
 
+                resultadosArbol.Add((test[k].getAttributes()[test[k].getAttributes().Length - 1]== 0+"" ? "no" : "yes"));
 
                 Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
                     "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
             }
 
             ResultClasification c = new ResultClasification(classification);
-            c.Show();
+           // c.Show();
+            Recorrer();
         }
 
         private void printTree(Node<Dato> root, String tab)
@@ -839,6 +842,14 @@ namespace Proyecto_Integrador
         {
             pictureBox1.Width -= 200;
             pictureBox1.Height -= 200;
+        }
+
+        private void Recorrer()
+        {
+            foreach (string valor in resultadosArbol)
+            {
+                Console.WriteLine(valor);
+            }
         }
 
         
