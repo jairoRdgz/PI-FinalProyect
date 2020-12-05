@@ -20,14 +20,14 @@ enviroment that can compile C# and run Windows Forms .net Framework applications
 Github repository link:
 https://github.com/jairoRdgz/PI-FinalProyect
 
-#Documentation
+# Documentation
 
 + [Project statement](www.google.com)
 + [Engineering method](www.google.com)
 + [Requirements](www.google.com)
 + [Engineering method](www.google.com)
 
-##Diagrams
+## Diagrams
 + [Class Diagram](www.google.com)
 + [Sequence Diagram 1](www.google.com)
 + [Sequence Diagram 2](www.google.com)
