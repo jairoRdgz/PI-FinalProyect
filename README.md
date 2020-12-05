@@ -1,21 +1,21 @@
 ﻿<h1 align="center"> CAPSTONE PROJECT: BANK TERM DEPOSIT</h1>
- 
-This is an academic project to learn how to implement a desicion tree in order to tackle a problem which require predictions using the 
+
+This is an academic project to learn how to implement a decision tree in order to tackle a problem which require predictions using the
 C# programming language.
-The data used in the project is related with direct marketing campaigns (phone calls) of banking institution. 
+The data used in the project is related with direct marketing campaigns (phone calls) of banking institution.
 The classification goal is to predict if the client will subscribe a term deposit. The application has a user interface and loads
 the information from a dataset which has a .csv format.
-The solution of the problem is implemented using C# and the .net framework. In order to have a GUI the project is a 
+The solution of the problem is implemented using C# and the .net framework. In order to have a GUI the project is a
 windows forms app.
 
 # Dataset and related information
-For more information and the dataset used for in the developing of this proyect check this link 
-http://archive.ics.uci.edu/ml/datasets/Bank+Marketing 
+For more information and the dataset used for in the developing of this proyect check this link
+http://archive.ics.uci.edu/ml/datasets/Bank+Marketing
 
 # DOWNLOAD:
 
 If you want to execute this program you can download the code directly from the Github repository (link below), and run it in any
-enviroment that can compile C# and run Windows Forms .net Framework applications. 
+enviroment that can compile C# and run Windows Forms .net Framework applications.
 
 Github repository link:
 https://github.com/jairoRdgz/PI-FinalProyect
@@ -29,7 +29,7 @@ https://github.com/jairoRdgz/PI-FinalProyect
 + [Jairo Rodriguez](https://github.com/jairoRdgz "jairoRdgz")
 
 # Videos
-+ [Video 1](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Videos/Entrega%201/Final.mp4)
++ [Video 1](https://youtu.be/U2cCtGxF0GA)
 + [Video 2](https://youtu.be/EMYna1j9EJ0)
 + [Video 3](https://youtu.be/JumY_YtpVKk)
 
@@ -37,7 +37,7 @@ IDE used to develop the solution:
 Visual studio 2019
 
 Operative system:
-Windows 
+Windows
 
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
