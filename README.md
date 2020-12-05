@@ -22,18 +22,19 @@ https://github.com/jairoRdgz/PI-FinalProyect
 
 # Documentation
 
-+ [Project statement](www.google.com)
-+ [Engineering method](www.google.com)
-+ [Requirements](www.google.com)
-+ [Engineering method](www.google.com)
++ [Project statement](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/PI_I_EnunciadoProyecto.pdf)
++ [Engineering method](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Engineering%20method.pdf)
++ [Requirements](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Functional%20Requiriments.pdf)
++ [BankDecisionTree](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/BankDecisionTree.pdf)
 
 ## Diagrams
-+ [Class Diagram](www.google.com)
-+ [Sequence Diagram 1](www.google.com)
-+ [Sequence Diagram 2](www.google.com)
-+ [Sequence Diagram 3](www.google.com)
-+ [Sequence Diagram 4](www.google.com)
-+ [Sequence Diagram 5](www.google.com)
++ [Class Diagram](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Class%20Diagram/Class%20Diagram%20Weketeam.jpg)
++ [Object Diagram](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Object%20Diagram/Diagrama%20de%20objetos%20Proyecto%20integrador.pdf);
++ [Sequence Diagram 1](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/Filtrar%20y%20organizar.jpg)
++ [Sequence Diagram 2](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/GiveAccuerancyE.jpg)
++ [Sequence Diagram 3](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/Graficar.jpg)
++ [Sequence Diagram 4](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/MakePredition.jpg)
++ [Sequence Diagram 5](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/Sequence%20Diagram.jpg)
 
 
 # Videos
