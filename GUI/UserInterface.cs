@@ -428,20 +428,20 @@ namespace Proyecto_Integrador
             jobChart.Series["Series1"].Points.AddXY("Unknown", unknown);
         }
 
-        public void prediction()
+        public string prediction(int agep, int jobp, int maritalp, int educationp, int debtp, int balancep, int housingp, int loanp)
         {
             Random rn = new Random();
             DatoList predictions = new DatoList();
             string name = predictionName.Text;
-            int age = predictionAge.SelectedIndex;
-            int job = predictionJob.SelectedIndex;
-            int marital = predictionMarital.SelectedIndex;
-            int education = predictionEducation.SelectedIndex;
-            int debt = predictionDebt.Checked ? 1 : 0;
+            int age = agep;
+            int job = jobp;
+            int marital = maritalp;
+            int education = educationp;
+            int debt = debtp;
             string clase = rn.Next(0,1)+"";
-            int balance = predictionBalance.SelectedIndex;
-            int housing = predictionHousing.Checked ? 1 : 0;
-            int loan = PredictionLoan.Checked ? 1 : 0;
+            int balance = balancep;
+            int housing = housingp;
+            int loan = loanp;
 
             Dato pt = new Dato(age+"", job+"",marital+"", education+"", debt+"", balance+"", housing+"", loan+"", "");
             string clas = this.tree.PrintLeaf(this.tree.Classify(pt, this.root))[1]+"";
@@ -458,6 +458,7 @@ namespace Proyecto_Integrador
 
             outputLabel.Text = respuesta;
             errorSelf.Text = "35 %";
+            return respuesta;
         }
 
         private void MakePrediction_Click(object sender, EventArgs e)
@@ -465,8 +466,16 @@ namespace Proyecto_Integrador
             string a = desicionTree.Text;
             if (a.Equals("self-implemented"))
             {
+                int age = predictionAge.SelectedIndex;
+                int job = predictionJob.SelectedIndex;
+                int marital = predictionMarital.SelectedIndex;
+                int education = predictionEducation.SelectedIndex;
+                int debt = predictionDebt.Checked ? 1 : 0;
+                int balance = predictionBalance.SelectedIndex;
+                int housing = predictionHousing.Checked ? 1 : 0;
+                int loan = PredictionLoan.Checked ? 1 : 0;
                 //prediccion del aebol propio
-                prediction();
+                prediction(age, job, marital, education, debt, balance, housing, loan);
             }
             else if (a.Equals("Accord library"))
             {
@@ -742,7 +751,7 @@ namespace Proyecto_Integrador
             Microsoft.Office.Interop.Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
             Microsoft.Office.Interop.Excel.Range xlRange = xlWorksheet.UsedRange;
 
-            for (int i = 1; i <= 288; i++)
+            for (int i = 1; i <= 864; i++)
             {
                 int t = 0;
                 int c = 0;
@@ -804,7 +813,7 @@ namespace Proyecto_Integrador
                 }
 
                 objCelda = HojaExcel.Range["A" + (i + 1), Type.Missing];
-                objCelda.Value = "no";
+                objCelda.Value = prediction(1,t,1,1,c,b,1,p);
 
                 objCelda = HojaExcel.Range["B"+(i+1), Type.Missing];
                 objCelda.Value = BankPrediction(1, t, 1, 1, c, b, 1, p, "Aja");
