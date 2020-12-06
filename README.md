@@ -29,7 +29,7 @@ https://github.com/jairoRdgz/PI-FinalProyect
 + [BankDecisionTree](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/BankDecisionTree.pdf)
 
 ## Diagrams
-+ [Class Diagram](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Class%20Diagram/Class%20Diagram%20Weketeam.jpg)
++ [Class Diagram](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Class%20Diagram/Class%20Diagram.jpg)
 + [Object Diagram](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Object%20Diagram/Diagrama%20de%20objetos%20Proyecto%20integrador.pdf);
 + [Sequence Diagram 1](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/Filtrar%20y%20organizar.jpg)
 + [Sequence Diagram 2](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/Sequence%20Diagram/GiveAccuerancyE.jpg)
