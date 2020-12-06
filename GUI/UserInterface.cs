@@ -147,9 +147,6 @@ namespace Proyecto_Integrador
             tablaDatos.DataSource = table;
         }
 
-        //this method
-        //fills the 
-        //labels of the tables
         public void fillFiltros()
         {
             filtros.Items.Add("AGE");
@@ -444,7 +441,7 @@ namespace Proyecto_Integrador
             int loan = loanp;
 
             Dato pt = new Dato(age+"", job+"",marital+"", education+"", debt+"", balance+"", housing+"", loan+"", "");
-            string clas = this.tree.PrintLeaf(this.tree.Classify(pt, this.root))[1]+"";
+           // string clas = this.tree.PrintLeaf(this.tree.Classify(pt, this.root))[1]+"";
             string respuesta;
 
             if (clase.Equals("1"))
@@ -456,8 +453,9 @@ namespace Proyecto_Integrador
                 respuesta = "no";
             }
 
-            outputLabel.Text = respuesta;
+            resultado.Text = respuesta;
             errorSelf.Text = "35 %";
+            subjectLabel.Text = "for" + " " + name + " " + "the prediction is";
             return respuesta;
         }
 
