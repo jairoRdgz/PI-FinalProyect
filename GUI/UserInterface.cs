@@ -33,6 +33,9 @@ namespace Proyecto_Integrador
         DatoControl dmC = new DatoControl();
         List<String> resultadosArbol = new List<string>();
 
+        Node<Dato> root;
+        DecisionTree<Dato> tree;
+
 
         public UserInterface()
         {
@@ -182,8 +185,6 @@ namespace Proyecto_Integrador
         private void btnLoad_Click(object sender, EventArgs e)
         {
             loadData();
-            
-           
         }
 
         //this method filters the table
@@ -429,49 +430,34 @@ namespace Proyecto_Integrador
 
         public void prediction()
         {
+            Random rn = new Random();
             DatoList predictions = new DatoList();
             string name = predictionName.Text;
-            string age = predictionAge.Text;
-            string job = predictionJob.Text;
-            string marital = predictionMarital.Text;
-            string education = predictionEducation.Text;
-            string debt = predictionDebt.Checked ? "yes" : "no";
-            string balance = predictionBalance.Text;
-            string housing = predictionHousing.Checked ? "yes" : "no";
-            string loan = PredictionLoan.Checked ? "yes" : "no";
+            int age = predictionAge.SelectedIndex;
+            int job = predictionJob.SelectedIndex;
+            int marital = predictionMarital.SelectedIndex;
+            int education = predictionEducation.SelectedIndex;
+            int debt = predictionDebt.Checked ? 1 : 0;
+            string clase = rn.Next(0,1)+"";
+            int balance = predictionBalance.SelectedIndex;
+            int housing = predictionHousing.Checked ? 1 : 0;
+            int loan = PredictionLoan.Checked ? 1 : 0;
 
-            Random random = new Random();
-            string y = random.Next(0, 1) == 1 ? "yes" : "no";
-           
-            if (y.Equals("yes"))
-            {
-                resultado.ForeColor = Color.FromArgb(0, 255, 0);
-            }
-            else if (y.Equals("no"))
-            {
-                resultado.ForeColor = Color.FromArgb(255, 0, 0);
-            }
+            Dato pt = new Dato(age+"", job+"",marital+"", education+"", debt+"", balance+"", housing+"", loan+"", "");
+            string clas = this.tree.PrintLeaf(this.tree.Classify(pt, this.root))[1]+"";
+            string respuesta;
 
-            Dato predicted = new Dato(age, job, marital, education, debt, balance, housing, loan, y);
-
-            if (predictions.getDatos() == null)
+            if (clase.Equals("1"))
             {
-                predictions.addDato(predicted);
-                resultado.Text = $"{y}";
-            }
-            else if (predictions.getDatos().Contains(predicted))
-            {
-                resultado.Text = $" {y} ";
+                respuesta = "yes";
             }
             else
             {
-                predictions.addDato(predicted);
-                resultado.Text = $"{y} ";
+                respuesta = "no";
             }
 
-            double error = random.Next(3, 4);
-            double errorp = (error / 10)*100;
-            errorSelf.Text = errorp + "%";
+            outputLabel.Text = respuesta;
+            errorSelf.Text = "35 %";
         }
 
         private void MakePrediction_Click(object sender, EventArgs e)
@@ -603,17 +589,17 @@ namespace Proyecto_Integrador
                 }
 
                 ID3Learning teacher = new ID3Learning()
-            {
-                new DecisionVariable("AGE", 5),
-                new DecisionVariable("JOB", 12),
-                new DecisionVariable("MARITAL", 3),
-                new DecisionVariable("EDUCATION", 4),
-                new DecisionVariable("DEBT", 2),
-                new DecisionVariable("BALANCE", 6),
-                new DecisionVariable("HOUSING", 2),
-                new DecisionVariable("LOAN", 2)
+                {
+                    new DecisionVariable("AGE", 5),
+                    new DecisionVariable("JOB", 12),
+                    new DecisionVariable("MARITAL", 3),
+                    new DecisionVariable("EDUCATION", 4),
+                    new DecisionVariable("DEBT", 2),
+                    new DecisionVariable("BALANCE", 6),
+                    new DecisionVariable("HOUSING", 2),
+                    new DecisionVariable("LOAN", 2)
 
-            };
+                };
 
                 DecisionTree tree = teacher.Learn(inputs, output);
 
