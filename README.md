@@ -25,6 +25,7 @@ https://github.com/jairoRdgz/PI-FinalProyect
 + [Project statement](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/PI_I_EnunciadoProyecto.pdf)
 + [Engineering method](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Engineering%20method.pdf)
 + [Requirements](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Functional%20Requiriments.pdf)
++ [All about Design](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Dise%C3%B1o%20de%20experimentos%20Weketeam.xlsx)
 + [BankDecisionTree](https://github.com/jairoRdgz/PI-FinalProyect/blob/Feature/tree/docs/Diagrams/BankDecisionTree.pdf)
 
 ## Diagrams
@@ -41,7 +42,7 @@ https://github.com/jairoRdgz/PI-FinalProyect
 + [Video 1](https://youtu.be/U2cCtGxF0GA)
 + [Video 2](https://youtu.be/EMYna1j9EJ0)
 + [Video 3](https://youtu.be/JumY_YtpVKk)
-+ [Video 4](www.google.com);
++ [Video 4](www.google.com)
 
 # Made By
 ## Weketeam
